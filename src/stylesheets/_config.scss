@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none !important;
+}
+
+
+$main-font: "Lora", sans-serif;
+$secondary-font: "Nunito", cursive;
+$light-grey-color: #F1F1F2;
+$dark-grey-color: #454545;
+$pink-color: #CB126B;
+$nav-height: 6.5rem;
+   
+
+html,body, #___gatsby, #gatsby-focus-wrapper, .layout {
+    height: 100%;
+    width: 100vw;
+    overflow: hidden;
+    font-family: 'Lora', serif;
+}
+
+html {
+    font-family: $main-font;
+    font-size: 10px;
+    color: #000;
+    scroll-behavior: smooth;
+}
+
+.layout {
+    max-width: 2000px;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $secondary-font
+}
+
+a {
+    text-decoration: none;
+}
+
+section{
+    height: calc(100vh - 7rem);
+    position: fixed;
+    background-color: $light-grey-color;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem;
+}
+
+// home page heading
+h1 {
+    font-size: 5.5rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .25rem;
+    text-transform: capitalize;
+}
+
+//all pages heading
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .25rem;
+    text-transform: capitalize;
+}
+
+h3{
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .25rem;
+    text-transform: capitalize;
+}
+
+
+
+
+p {
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    font-family: $main-font;
+    line-height: 1.28;
+    font-weight: 200;
+}
+
+
+
+.line {
+    width: 50vw;
+    color: $pink-color;
+}
+
+//pink-colored-text
+.pink{
+    color: $pink-color;
+}
+
+.btn_solid {
+    border: 1px solid black;
+    padding: 1rem 2.5rem;
+}
+
+.btn_link {
+    font-size: 1.25rem;
+    font-family: $main-font;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    color: $pink-color;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $pink-color ;
+    transform: color 0.5;
+     transform: color 1s ease;
+    &:hover, &:focus {
+        color: $dark-grey-color;
+    }
+}
+

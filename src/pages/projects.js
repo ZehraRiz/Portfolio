@@ -1,33 +1,38 @@
 import React from "react";
 import { Layout } from "../components";
-import { Link } from "gatsby";
-import Image from "gatsby-image";
+
+
+import ProjectCard from "../components/ProjectCard";
 
 const projects = ({ data }) => {
 	const { allContentfulProjects: { nodes: projects } } = data;
 	return (
-		<Layout>
-			<h1>Projects</h1>
-			<ul>
-				<li>All</li>
-				<li>Full Stack</li>
-				<li>ReactJS</li>
-				<li>Static Sites</li>
-
-				{projects.map((project) => {
-					return (
-						<div key={project.contentful_id}>
-							<h1>{project.name}</h1>
-							<p>{project.shortDescription.shortDescription}</p>
-							<p>{project.liveUrl}</p>
-							<p>{project.githubUrl}</p>
-							<Link to={`/projects/${project.slug}`}>View details</Link>
-							<Image fluid={project.displayImage.fluid} />
-						</div>
-					);
-				})}
-				<section />
-			</ul>
+		<Layout page="Projects">
+			<div className="container projects-container">
+				<ul className="projects-filter">
+					<li>All</li>
+					<li>Full Stack</li>
+					<li>ReactJS</li>
+					<li>Static Sites</li>
+				</ul>
+				<div className="projects-cards-container">
+					{projects.map((project) => {
+						const p = {
+							name: project.name,
+							description: project.shortDescription.shortDescription,
+							live: project.liveUrl,
+							code: project.githubUrl,
+							image: project.displayImage.fluid,
+							slug: project.slug
+						};
+						return (
+							<ProjectCard key={project.contentful_id} project={p} />
+							
+						
+						);
+					})}
+				</div>
+			</div>
 		</Layout>
 	);
 };

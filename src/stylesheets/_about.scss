@@ -1,0 +1,17 @@
+.about_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about-image {
+    width: 80%;
+    margin: 0 auto;
+    clip-path: circle();
+    height: 30%;
+}
+
+.home-description-container {
+    margin-top: 2rem;
+}
