@@ -26,27 +26,27 @@ export const NavBar = ({ page }) => {
 				<ul className="nav-list">
 					<li className="nav-item">
 						<Link to="/" className="nav-link">
-							Z<span className="pink">.</span>
+							Z
 						</Link>
 					</li>
 					<li className="nav-item">
 						<Link to="/about" className="nav-link">
-							About me<span className="pink">.</span>
+							About me
 						</Link>
 					</li>
 					<li>
 						<Link to="/projects" className="nav-link">
-							My projects<span className="pink">.</span>
+							My projects
 						</Link>
 					</li>
 					<li>
 						<Link to="/blog" className="nav-link">
-							Blog<span className="pink">.</span>
+							Blog
 						</Link>
 					</li>
 					<li>
 						<Link to="/contact" className="nav-link">
-							Connect<span className="pink">.</span>
+							Connect
 						</Link>
 					</li>
 				</ul>

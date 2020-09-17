@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../components";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 
 export default function Home() {
@@ -28,7 +28,7 @@ export default function Home() {
 					Writing empowered code<span className="pink">.</span>
 				</h1>
 				<p className="home_subheading">Hello I am Zehra.</p>
-				<button className="btn_link home_btn">View my work</button>
+				<Link to ="/projects" className="btn home_btn">View my work</Link>
 			</div>
 
 			{/* </BackgroundImage> */}

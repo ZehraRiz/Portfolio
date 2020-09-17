@@ -7,24 +7,27 @@ const ProjectCard = ({ project }) => {
 	const { name, description, live, code, image, slug } = project;
 	return (
 		<div className="project-card">
-			<BackgroundImage className="project-image" fluid={image} backgroundColor="#fff">
-				<a className="project-live btn_link" href={live}>
-					Live preview
-				</a>
-				<a className="project-code btn_link" href={code}>
-					View Code
-				</a>
-			</BackgroundImage>
+			
+			<BackgroundImage className="project-image" fluid={image} backgroundColor="#fff" />
 			<div className="project-card-description">
-				<h3 className="project-name">{name}</h3>
-				<p className="project-description">
+				
+				<h2 className="project-name">{name}</h2>
+				<p className="project-description p-small">
 					{description}
 					<span>
-						<Link className="btn_link" to={`/projects/${slug}`}>
-							View details
+						<Link className="pink" to={`/projects/${slug}`}>
+							{" "}Read more...
 						</Link>
 					</span>
 				</p>
+				<div className="links">
+					<a className="btn " href={live} target="_blank">
+						Live preview
+					</a>
+					<a className="btn " href={code} target="_blank">
+						View Code
+					</a>
+				</div>
 			</div>
 		</div>
 	);

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap");
 
 *,
 *::before,
@@ -10,20 +10,22 @@
     list-style-type: none !important;
 }
 
-
 $main-font: "Lora", sans-serif;
 $secondary-font: "Nunito", cursive;
-$light-grey-color: #F1F1F2;
+$light-grey-color: #f1f1f2;
 $dark-grey-color: #454545;
-$pink-color: #CB126B;
+$pink-color: #cb126b;
 $nav-height: 6.5rem;
-   
 
-html,body, #___gatsby, #gatsby-focus-wrapper, .layout {
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+.layout {
     height: 100%;
     width: 100vw;
     overflow: hidden;
-    font-family: 'Lora', serif;
+    font-family: "Lora", serif;
 }
 
 html {
@@ -38,15 +40,20 @@ html {
     height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: $secondary-font
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $secondary-font;
 }
 
 a {
     text-decoration: none;
 }
 
-section{
+section {
     height: calc(100vh - 7rem);
     position: fixed;
     background-color: $light-grey-color;
@@ -64,39 +71,41 @@ h1 {
     font-size: 5.5rem;
     font-weight: 600;
     line-height: 1;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-transform: capitalize;
 }
 
 //all pages heading
-h2{
+h2 {
     font-size: 2.5rem;
     font-weight: 600;
     line-height: 1;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-transform: capitalize;
 }
 
-h3{
-    font-size: 2rem;
+h3 {
+    font-size: 2.5rem;
     font-weight: 800;
-    line-height: 1;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-transform: capitalize;
 }
-
-
-
 
 p {
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.1rem;
+    margin-right: -0.1rem;
     font-family: $main-font;
     line-height: 1.28;
-    font-weight: 200;
+    font-weight: 400;
 }
 
-
+p-small {
+    font-size: 1.2rem !important;
+    line-height: 0;
+    letter-spacing: 0;
+    line-height: 0;
+}
 
 .line {
     width: 50vw;
@@ -104,29 +113,26 @@ p {
 }
 
 //pink-colored-text
-.pink{
+.pink {
     color: $pink-color;
+    
 }
 
-.btn_solid {
-    border: 1px solid black;
-    padding: 1rem 2.5rem;
-}
-
-.btn_link {
-    font-size: 1.25rem;
-    font-family: $main-font;
-    font-style: italic;
+.btn {
+    font-size: 1.4rem;
+    font-family: $secondary-font;
+    font-weight: 600;
     text-align: center;
     text-transform: capitalize;
+    letter-spacing: 0.2rem;
+    margin-right: -0.2rem;
     color: $pink-color;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid $pink-color ;
-    transform: color 0.5;
-     transform: color 1s ease;
-    &:hover, &:focus {
-        color: $dark-grey-color;
+    border-bottom: 2px solid $pink-color;
+    transition: transform 0.15s ease-in;
+    &:hover,
+    &:focus {
+        transform: scale(1.1);
     }
 }
-
