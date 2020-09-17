@@ -25,15 +25,16 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 0;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .open .overlay {
     opacity: 1;
+    height: 100vh;
 }
 
 .nav-list {
@@ -49,15 +50,13 @@
     background-color: #fff;
     z-index: 120;
     transform-origin: 90% 0%;
-    scale: 0;
-    transition: scale .8s ease;
+    transform: scale(0);
+    transition: transform 0.5s ease;
 }
 
 .open .nav-list {
-    scale: 1;
+    transform: scale(1);
 }
-
-
 
 .nav-link {
     font-size: 1.5rem;
