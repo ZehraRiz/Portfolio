@@ -14,7 +14,7 @@ const contact = () => {
 			message
 		};
 		axios
-			.post("http://localhost:3000/email", data)
+			.post("https://zehrataqvi.herokuapp.com/email", data)
 			.then((res) => {
 				console.log(res);
 			})
