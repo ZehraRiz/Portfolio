@@ -1,30 +1,31 @@
 import React from "react";
 import Image from "gatsby-image";
 import { Link } from "gatsby";
-import BackgroundImage from "gatsby-background-image";
+import Img from "gatsby-image";
 
-const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project }) => {
 	const { name, description, live, code, image, slug } = project;
 	return (
 		<div className="project-card">
-			
-			<BackgroundImage className="project-image" fluid={image} backgroundColor="#fff" />
+			<Link to={`/projects/${slug}`} className="project-image">
+			<Img fluid={image}  />
+</Link>
 			<div className="project-card-description">
-				
-				<h2 className="project-name">{name}</h2>
+				<h3 className="project-name">{name}</h3>
 				<p className="project-description p-small">
 					{description}
 					<span>
 						<Link className="pink" to={`/projects/${slug}`}>
-							{" "}Read more...
+							{" "}
+							Read more...
 						</Link>
 					</span>
 				</p>
 				<div className="links">
-					<a className="btn " href={live} target="_blank">
+					<a className="link-btn " href={live} target="_blank">
 						Live preview
 					</a>
-					<a className="btn " href={code} target="_blank">
+					<a className="link-btn " href={code} target="_blank">
 						View Code
 					</a>
 				</div>
@@ -33,4 +34,4 @@ const ProjectCard = ({ project }) => {
 	);
 };
 
-export default ProjectCard;
+

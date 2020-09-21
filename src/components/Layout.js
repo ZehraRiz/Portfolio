@@ -1,12 +1,14 @@
 import React from "react";
 import { NavBar } from "../components";
+import { SecondaryNav } from "../components";
 import "../stylesheets/style.scss";
 
 export const Layout = ({ children, page }) => {
 	return (
 		<div className="layout">
 			<NavBar page={page} />
-				<section>{children}</section>
+			<section className="section"><SecondaryNav />
+				{children}</section>
 		</div>
 	);
 };

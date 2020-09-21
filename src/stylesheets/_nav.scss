@@ -14,8 +14,8 @@
 }
 
 .nav-icon {
-    height: 30px !important;
-    width: 30px !important;
+    height: 28px !important;
+    width: 28px !important;
     z-index: 150 !important;
 }
 
@@ -59,11 +59,32 @@
 }
 
 .nav-link {
-    font-size: 1.75rem;
-    color: $dark-grey-color;
-    transform: color 1s ease;
-    &:hover,
-    &:focus {
-        color: black;
-    }
+    font-family: $secondary-font;
+    font-size: 1.3rem;
+    letter-spacing: .25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $main-font-color;
+}
+
+.active {
+    color: $pink-color;
+    text-decoration: underline;
+}
+
+.secondary_nav-container{
+    display: flex;
+    height: 14rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.secondary_nav-icons{
+    color: $pink-color;
+}
+
+.secondary_nav-icon {
+     height: 20px !important;
+      width: 20px !important;
+      margin-right: 1.2rem;
 }

@@ -5,15 +5,21 @@ import { Link } from "gatsby";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const NavBar = ({ page }) => {
-
 	const [ isOpen, setIsOpen ] = useState(false);
 
 	return (
 		<nav className={isOpen ? "open" : ""}>
-			<div className="overlay" />
+			<div
+				className="overlay"
+				onClick={() => {
+					setIsOpen(!isOpen);
+				}}
+			/>
 			<div className="nav">
 				<div className="mobile-nav">
-					<h2>{page}<span className="pink">.</span></h2>
+					<Link to="/index">
+						<h1>Zehra Rizvi</h1>
+					</Link>
 					<FontAwesomeIcon
 						className="nav-icon"
 						icon={faBars}
@@ -25,29 +31,32 @@ export const NavBar = ({ page }) => {
 
 				<ul className="nav-list">
 					<li className="nav-item">
-						<Link to="/" className="nav-link">
-							Z
-						</Link>
+						<h2>
+							<Link to="/" className="nav-link" activeClassName="active">
+								Projects
+							</Link>
+						</h2>
 					</li>
 					<li className="nav-item">
-						<Link to="/about" className="nav-link">
-							About me
-						</Link>
+						<h2>
+							<Link to="/about" className="nav-link" activeClassName="active">
+								About
+							</Link>
+						</h2>
 					</li>
 					<li>
-						<Link to="/projects" className="nav-link">
-							My projects
-						</Link>
+						<h2>
+							<Link to="/blog" className="nav-link" activeClassName="active">
+								Blog
+							</Link>
+						</h2>
 					</li>
 					<li>
-						<Link to="/blog" className="nav-link">
-							Blog
-						</Link>
-					</li>
-					<li>
-						<Link to="/contact" className="nav-link">
-							Connect
-						</Link>
+						<h2>
+							<Link to="/contact" className="nav-link" activeClassName="active">
+								Contact
+							</Link>
+						</h2>
 					</li>
 				</ul>
 			</div>

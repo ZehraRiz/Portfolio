@@ -17,6 +17,7 @@ exports.createPages = async ({ graphql, actions }) => {
 			component: require.resolve("./src/templates/ProjectTemplate.js"),
 			context: {
 				slug: project.slug
+				
 			}
 		});
 	});
