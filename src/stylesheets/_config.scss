@@ -59,6 +59,7 @@ a {
     width: 100%;
     height: calc(100vh - 7rem);
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -67,11 +68,7 @@ a {
     padding: 0rem 2rem;
 }
 
-.main-container {
-    margin-top: 3rem;
-}
-
-// home page heading
+// title
 h1 {
     font-size: 2.5rem;
     font-weight: 800;
@@ -81,7 +78,7 @@ h1 {
     color: $secondary-font-color;
 }
 
-
+//sub-nav
 h2 {
     font-size: 1.7rem;
     font-weight: 600;
@@ -89,20 +86,44 @@ h2 {
     color: $secondary-font-color;
 }
 
+//projects heading
 h3 {
     font-size: 1.7rem;
-    letter-spacing: .2rem;
+    letter-spacing: 0.2rem;
     font-weight: 800;
     color: $secondary-font-color;
     text-transform: capitalize;
 }
 
+//page content heading
+h4 {
+    font-family: $secondary-font;
+    font-size: 2.2rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $secondary-font-color;
+    margin: 1rem 0;
+    position: relative;
+}
+
+h4::after {
+    position: absolute;
+    top: -10px;
+    overflow: hidden;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    content: '\a0';
+    background-color: $main-font-color;
+}
+
 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
     margin-right: -0.1rem;
     font-family: $main-font;
-    line-height: 1.28;
+    line-height: 2.5rem;
     font-weight: 200;
     color: $main-font-color;
 }
@@ -122,27 +143,23 @@ p-small {
 //pink-colored-text
 .pink {
     color: $pink-color;
-    
-    
 }
 
 .btn {
-    font-size: 1.4rem;
     font-family: $secondary-font;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
     font-weight: 600;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: 0.2rem;
     margin-right: -0.2rem;
-    color: $pink-color;
+    color: $secondary-font-color;
     background-color: transparent;
-    border: none;
-    border-bottom: 2px solid $pink-color;
-    transition: transform 0.15s ease-in;
-    &:hover,
-    &:focus {
-        transform: scale(1.1);
-    }
+    border: 1.5px solid $secondary-font-color;
+    padding: 1.2rem 2.8rem;
+    cursor: pointer;
 }
 
 .link-btn {
@@ -151,6 +168,6 @@ p-small {
     margin-right: -0.1rem;
     font-family: $main-font;
     line-height: 1.28;
-    font-weight: 200;
+    font-weight: 400;
     color: $pink-color;
 }

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "gatsby";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-export const NavBar = ({ page }) => {
+export const NavBar = () => {
 	const [ isOpen, setIsOpen ] = useState(false);
 
 	return (

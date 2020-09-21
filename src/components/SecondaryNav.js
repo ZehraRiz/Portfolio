@@ -2,7 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare, faLinkedin, faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 
-export const SecondaryNav = () => {
+export const SecondaryNav = ({ page }) => {
+	
 	return (
 		<div className="container secondary_nav-container">
 			<div className="secondary_nav-text">
@@ -17,6 +18,12 @@ export const SecondaryNav = () => {
 				<FontAwesomeIcon icon={faLinkedin} className="secondary_nav-icon" />
 				<FontAwesomeIcon icon={faTwitterSquare} className="secondary_nav-icon" />
 			</div>
+			{/* <div className="secondary_nav-divider">
+					<hr></hr>
+			</div> */}
+			<h4>{page}</h4>
+				
+
 		</div>
 	);
 };

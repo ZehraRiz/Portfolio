@@ -61,7 +61,7 @@
 .nav-link {
     font-family: $secondary-font;
     font-size: 1.3rem;
-    letter-spacing: .25rem;
+    letter-spacing: 0.25rem;
     text-transform: uppercase;
     font-weight: 600;
     color: $main-font-color;
@@ -72,19 +72,31 @@
     text-decoration: underline;
 }
 
-.secondary_nav-container{
+.secondary_nav-container {
     display: flex;
-    height: 14rem;
+    height: 18rem;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.secondary_nav-icons{
-    color: $pink-color;
+.secondary_nav-icons {
+    color: $main-font-color;
+    text-align: right;
 }
 
 .secondary_nav-icon {
-     height: 20px !important;
-      width: 20px !important;
-      margin-right: 1.2rem;
+    height: 20px !important;
+    width: 20px !important;
+    margin-right: 1.2rem;
+}
+
+.secondary_nav-divider{
+    color: $main-font-color ;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+hr {
+    color: $main-font-color;
 }

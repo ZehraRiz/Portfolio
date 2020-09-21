@@ -6,8 +6,8 @@ import "../stylesheets/style.scss";
 export const Layout = ({ children, page }) => {
 	return (
 		<div className="layout">
-			<NavBar page={page} />
-			<section className="section"><SecondaryNav />
+			<NavBar  />
+			<section className="section"><SecondaryNav page={page}/>
 				{children}</section>
 		</div>
 	);

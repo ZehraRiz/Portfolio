@@ -24,26 +24,22 @@ const contact = () => {
 	};
 
 	return (
-		<Layout page="connect">
-			<div className="container connect_container">
-				<p>Feel free to get in touch with me.</p>
-				<p>I am always open to discussing new ideas and opportunities.</p>
-				<form onSubmit={formSubmit}>
-					<input type="text" id="name" />
-					<input type="email" id="email" />
-					<textarea id="message" />
-					<input type="submit" value="Send" />
+		<Layout page="CONTACT">
+			<div className="container">
+				
+				<p>
+					{" "}
+					Need help? Contact me on  <span className="pink">zehrataqi@gmail.com</span>
+				</p>
+				<br></br>
+				<p>I am always open to discussing new ideas and opportunities. Write to me</p>
+				<form onSubmit={formSubmit} className="contact-form">
+					<input type="text" id="name" className="input input-f" placeholder= "First name" />
+					<input type="text" id="lname" className="input input-l" placeholder= "Last name" />
+					<input type="email" id="email" className="input input-e" placeholder= "Email" />
+					<textarea id="message" className="input input-m" placeholder= "Message" />
+					<input type="submit" value="Send" className="btn input-b"/>
 				</form>
-				<img src="" alt="location" />
-				Riyadh, Saudi Arabia
-				<img src="" alt="email" />
-				zehrataqi@gmail.com
-				<img src="" alt="twitter" />
-				zehrataqi@gmail.com
-				<img src="" alt="linkedIn" />
-				linkedIn
-				<img src="" alt="github" />
-				Github
 			</div>
 		</Layout>
 	);

@@ -5,8 +5,8 @@ import { graphql, useStaticQuery, Link } from "gatsby";
 export default function Home({ data }) {
 	const { allContentfulProjects: { nodes: projects } } = data;
 	return (
-		<Layout page="work">
-			<div className="container main-container projects-container">
+		<Layout page="Projects">
+			<div className="container projects-container">
 					{projects.map((project) => {
 						const p = {
 							name: project.name,

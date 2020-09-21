@@ -7,8 +7,11 @@ export const ProjectCard = ({ project }) => {
 	const { name, description, live, code, image, slug } = project;
 	return (
 		<div className="project-card">
-			<Link to={`/projects/${slug}`} className="project-image">
-			<Img fluid={image}  />
+			<Link to={`/projects/${slug}`} className= "project-image">
+				<Img fluid={image} 
+				style={{ height: 'calc(100%)' }}
+					imgStyle={{ objectFit: 'cover' }}
+				/>
 </Link>
 			<div className="project-card-description">
 				<h3 className="project-name">{name}</h3>

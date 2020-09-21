@@ -3,8 +3,9 @@
 }
 
 .project-card {
-    height: 340px;
-    width: 300px;
+    height: 380px;
+    // width: 300px;
+    width: 100%;
     max-width: 100%;
     margin: 0rem auto 4rem;
     display: flex;
@@ -15,25 +16,25 @@
 
 .project-image {
      height: 50%;
-     background-size: cover !important;
+     overflow: hidden;
      
 }
 
 .project-card-description {
-    height: 50%;
+    height:50%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
+    align-items: flex-start;
+    padding: 0 1.5rem;
 }
 
 .links{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     width: 100%;
+    align-items: flex-end;
 
 }
 
