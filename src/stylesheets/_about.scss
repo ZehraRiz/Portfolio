@@ -1,22 +1,24 @@
 .about_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "i i"
+    "d d"
+    "b b"
 }
 
 .about-image {
-    width: 80%;
-    margin: 0 auto;
-    clip-path: circle();
-    height: 30%;
+  grid-area: i;
 }
 
 .home-description-container {
-    margin-top: 2rem;
+   grid-area: d;
+   padding: 2rem 0rem;
 }
 
 .button-container{
-     margin: 2rem auto;
+    grid-area: b;
 }

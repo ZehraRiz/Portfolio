@@ -1,9 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubSquare, faLinkedin, faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
-
-export const SecondaryNav = ({ page }) => {
-	
+import { faGithubAlt, faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {  Link } from "gatsby";
+export const SecondaryNav = ({ page, isProjectDescription }) => {
+	console.log(isProjectDescription)
 	return (
 		<div className="container secondary_nav-container">
 			<div className="secondary_nav-text">
@@ -14,16 +14,19 @@ export const SecondaryNav = ({ page }) => {
 			</div>
 
 			<div className="secondary_nav-icons">
-				<FontAwesomeIcon icon={faGithubSquare} className="secondary_nav-icon" />
-				<FontAwesomeIcon icon={faLinkedin} className="secondary_nav-icon" />
-				<FontAwesomeIcon icon={faTwitterSquare} className="secondary_nav-icon" />
-			</div>
+				<FontAwesomeIcon icon={faGithub} className="secondary_nav-icon" />
+				<FontAwesomeIcon icon={faLinkedinIn} className="secondary_nav-icon" />
+				<FontAwesomeIcon icon={faTwitter} className="secondary_nav-icon" />
+					</div>
 			{/* <div className="secondary_nav-divider">
 					<hr></hr>
 			</div> */}
-			<h4>{page}</h4>
-				
-
+			<div className="secondary_nav-page-heading">
+				<h4>{page}<span className="pink">.</span></h4>
+			{/* {isProjectDescription === true && <Link to="/" className="link-btn">
+					 back to all projects
+				</Link>} */}
+			</div>
 		</div>
 	);
 };

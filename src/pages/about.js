@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 
 export const query = graphql`
 	query {
-		file(relativePath: { eq: "about.jpeg" }) {
+		file(relativePath: { eq: "about.jpg" }) {
 			childImageSharp {
 				fluid(maxWidth: 400, quality: 100) {
 					...GatsbyImageSharpFluid
@@ -20,8 +20,9 @@ const about = ({ data }) => {
 		<Layout page="about">
 			<div className="container about_container">
 				<Img
+					className= "about-image"
 					fluid={data.file.childImageSharp.fluid}
-					style={{ height: "280px", width: "100%"}}
+					style={{ height: "100%", width: "50%", display: "inline"}}
 					imgStyle={{ objectFit: "cover" }}
 				/>
 				<div className="home-description-container">
@@ -38,7 +39,7 @@ const about = ({ data }) => {
 					<p className="home_para">Currently, I am learning testing of web-apps through Jest and Enzyme.</p>
 				</div>
 				<div className="button-container">
-				<div className="btn">Resume</div>
+				<div className="btn last-element">Resume</div>
 				</div>
 			</div>
 

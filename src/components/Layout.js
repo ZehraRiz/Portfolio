@@ -1,14 +1,17 @@
 import React from "react";
-import { NavBar } from "../components";
-import { SecondaryNav } from "../components";
+import { NavBar, SecondaryNav, Footer, Splash} from "../components";
 import "../stylesheets/style.scss";
 
-export const Layout = ({ children, page }) => {
-	return (
+export const Layout = ({ children, page, isProjectDescription }) => {
+	return (<>
+		<Splash />
 		<div className="layout">
 			<NavBar  />
-			<section className="section"><SecondaryNav page={page}/>
-				{children}</section>
+			<section className="section"><SecondaryNav page={page} isProjectDescription={isProjectDescription}/>
+				{children}
+			</section>
+			<Footer />
 		</div>
+		</>
 	);
 };

@@ -26,7 +26,6 @@ const contact = () => {
 	return (
 		<Layout page="CONTACT">
 			<div className="container">
-				
 				<p>
 					{" "}
 					Need help? Contact me on  <span className="pink">zehrataqi@gmail.com</span>
@@ -38,7 +37,7 @@ const contact = () => {
 					<input type="text" id="lname" className="input input-l" placeholder= "Last name" />
 					<input type="email" id="email" className="input input-e" placeholder= "Email" />
 					<textarea id="message" className="input input-m" placeholder= "Message" />
-					<input type="submit" value="Send" className="btn input-b"/>
+					<input type="submit" value="Send" className="btn input-b last-element"/>
 				</form>
 			</div>
 		</Layout>

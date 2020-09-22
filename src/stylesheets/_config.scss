@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
 
 *,
 *::before,
@@ -11,7 +11,7 @@
 }
 
 $main-font: "Lora", sans-serif;
-$secondary-font: "Nunito", cursive;
+$secondary-font: 'Open Sans', sans-serif;
 $main-font-color: #898889;
 $secondary-font-color: #000;
 $light-grey-color: #f8f7f8;
@@ -38,8 +38,10 @@ html {
 
 .layout {
     max-width: 2000px;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
+    overflow-y: scroll;
+    position: relative;
 }
 
 h1,
@@ -56,10 +58,9 @@ a {
 }
 
 .section {
+    margin-top: 7rem;
     width: 100%;
-    height: calc(100vh - 7rem);
-    overflow-y: scroll;
-    overflow-x: hidden;
+    min-height: calc(100vh - 19rem);
     scroll-behavior: smooth;
 }
 
@@ -70,8 +71,8 @@ a {
 
 // title
 h1 {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 4rem;
+    font-weight: 600;
     line-height: 1;
     letter-spacing: 0.1rem;
     text-transform: capitalize;
@@ -80,8 +81,8 @@ h1 {
 
 //sub-nav
 h2 {
-    font-size: 1.7rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     line-height: 1.2;
     color: $secondary-font-color;
 }
@@ -97,14 +98,12 @@ h3 {
 
 //page content heading
 h4 {
-    font-family: $secondary-font;
-    font-size: 2.2rem;
-    letter-spacing: 0.25rem;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
     text-transform: uppercase;
-    font-weight: 600;
-    color: $secondary-font-color;
-    margin: 1rem 0;
     position: relative;
+    font-weight: 800;
+    color: $secondary-font-color;
 }
 
 h4::after {
@@ -116,6 +115,13 @@ h4::after {
     height: 1px;
     content: '\a0';
     background-color: $main-font-color;
+}
+
+h5 {
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    font-family: $secondary-font;
+    font-weight: 700;
 }
 
 p {
@@ -170,4 +176,8 @@ p-small {
     line-height: 1.28;
     font-weight: 400;
     color: $pink-color;
+}
+
+.last-element{
+    margin-bottom: 5rem;
 }

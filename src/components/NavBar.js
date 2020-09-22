@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"; // to query for image data
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "gatsby";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import {ProjectsLink} from "../components"
 
 export const NavBar = () => {
 	const [ isOpen, setIsOpen ] = useState(false);
@@ -18,7 +19,7 @@ export const NavBar = () => {
 			<div className="nav">
 				<div className="mobile-nav">
 					<Link to="/index">
-						<h1>Zehra Rizvi</h1>
+						<h1>Z<span className="pink">.</span></h1>
 					</Link>
 					<FontAwesomeIcon
 						className="nav-icon"
@@ -32,9 +33,9 @@ export const NavBar = () => {
 				<ul className="nav-list">
 					<li className="nav-item">
 						<h2>
-							<Link to="/" className="nav-link" activeClassName="active">
+							<ProjectsLink to="/" className="nav-link">
 								Projects
-							</Link>
+								</ProjectsLink>
 						</h2>
 					</li>
 					<li className="nav-item">
