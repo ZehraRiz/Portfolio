@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 
 *,
 *::before,
@@ -11,7 +11,7 @@
 }
 
 $main-font: "Lora", sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
+$secondary-font: "Open Sans", sans-serif;
 $main-font-color: #898889;
 $secondary-font-color: #000;
 $light-grey-color: #f8f7f8;
@@ -42,7 +42,10 @@ html {
     overflow: hidden;
     overflow-y: scroll;
     position: relative;
+    
 }
+
+
 
 h1,
 h2,
@@ -99,7 +102,7 @@ h3 {
 //page content heading
 h4 {
     font-size: 1.8rem;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     text-transform: uppercase;
     position: relative;
     font-weight: 800;
@@ -113,7 +116,7 @@ h4::after {
     width: 100%;
     left: 0;
     height: 1px;
-    content: '\a0';
+    content: "\a0";
     background-color: $main-font-color;
 }
 
@@ -178,6 +181,6 @@ p-small {
     color: $pink-color;
 }
 
-.last-element{
+.last-element {
     margin-bottom: 5rem;
 }

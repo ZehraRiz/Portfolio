@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt, faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import {  Link } from "gatsby";
 export const SecondaryNav = ({ page, isProjectDescription }) => {
-	console.log(isProjectDescription)
 	return (
 		<div className="container secondary_nav-container">
 			<div className="secondary_nav-text">
@@ -14,9 +13,12 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 			</div>
 
 			<div className="secondary_nav-icons">
-				<FontAwesomeIcon icon={faGithub} className="secondary_nav-icon" />
-				<FontAwesomeIcon icon={faLinkedinIn} className="secondary_nav-icon" />
-				<FontAwesomeIcon icon={faTwitter} className="secondary_nav-icon" />
+				<a href="https://github.com/ZehraRiz"  target="_blank">
+					<FontAwesomeIcon icon={faGithub} className="secondary_nav-icon" /></a>
+					<a href="https://www.linkedin.com/in/zehrataqi"  target="_blank">
+				<FontAwesomeIcon icon={faLinkedinIn} className="secondary_nav-icon" /></a>
+				<a href="https://twitter.com/zehrataqi_"  target="_blank">
+				<FontAwesomeIcon icon={faTwitter} className="secondary_nav-icon" /></a>
 					</div>
 			{/* <div className="secondary_nav-divider">
 					<hr></hr>
