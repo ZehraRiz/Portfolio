@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 export const ProjectCard = ({ project }) => {
-	const { name, description, live, code, image, slug } = project;
+	const { name, description, live, code, image, slug, category } = project;
 	return (
 		<div className="project-card">
 			{slug ? (
@@ -19,15 +19,16 @@ export const ProjectCard = ({ project }) => {
 				<div>
 					<h3 className="project-name">{name}</h3>
 					<p className="project-description p-small">
-						React, MongoDB, Node
-						{/* {description} */}
-					</p>
-
-					{slug && (
-						<Link to={`/projects/${slug}`}>
-							<p className="pink">Read more...</p>
+						{category}	{slug && (
+						<Link to={`/projects/${slug}`}className="pink" >
+							<div >Read more...</div>
 						</Link>
 					)}
+						{/* {description} */}
+					
+					</p>
+
+					
 				</div>
 				<div className="links">
 					<a className="link-btn " href={live} target="_blank">

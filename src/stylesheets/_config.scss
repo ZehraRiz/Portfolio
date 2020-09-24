@@ -55,6 +55,7 @@ h6 {
 
 a {
     text-decoration: none;
+    line-height: 1.28rem;
 }
 
 .section {
@@ -94,6 +95,7 @@ h3 {
     font-weight: 800;
     color: $secondary-font-color;
     text-transform: capitalize;
+    margin-bottom: .5rem;
 }
 
 //page content heading
@@ -104,6 +106,7 @@ h4 {
     position: relative;
     font-weight: 800;
     color: $secondary-font-color;
+    width: 100%;
 }
 
 h4::after {
@@ -122,6 +125,7 @@ h5 {
     font-size: 1.3rem;
     font-family: $secondary-font;
     font-weight: 700;
+    line-height: 1.5rem;
 }
 
 p {
@@ -129,7 +133,6 @@ p {
     letter-spacing: 0.1rem;
     margin-right: -0.1rem;
     font-family: $main-font;
-    line-height: 2.5rem;
     font-weight: 200;
     color: $main-font-color;
 }
@@ -173,9 +176,9 @@ p-small {
     letter-spacing: 0.1rem;
     margin-right: -0.1rem;
     font-family: $main-font;
-    line-height: 1.28;
     font-weight: 400;
     color: $pink-color;
+    display: block;
 }
 
 .last-element {

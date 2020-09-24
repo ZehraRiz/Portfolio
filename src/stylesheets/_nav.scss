@@ -4,6 +4,12 @@ nav {
     top: 0;
     background-color: #fff;
     z-index: 120 !important;
+    p{
+        line-height: 2rem;
+    }
+    a {
+        line-height: 1.28rem;
+    }
 
 }
 
@@ -115,7 +121,7 @@ nav {
 
 
 .secondary_nav-page-heading{
-    margin: 1rem 0 3rem;
+    margin: 2rem 0rem 1rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;

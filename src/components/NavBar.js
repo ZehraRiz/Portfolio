@@ -45,13 +45,13 @@ export const NavBar = () => {
 							</Link>
 						</h2>
 					</li>
-					<li>
+					{/* <li>
 						<h2>
 							<Link to="/blog" className="nav-link" activeClassName="active">
 								Blog
 							</Link>
 						</h2>
-					</li>
+					</li> */}
 					<li>
 						<h2>
 							<Link to="/contact" className="nav-link" activeClassName="active">

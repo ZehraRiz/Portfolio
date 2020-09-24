@@ -14,7 +14,8 @@ export default function Home({ data }) {
 							live: project.liveUrl,
 							code: project.githubUrl,
 							image: project.displayImage.fluid,
-							slug: project.slug
+							slug: project.slug,
+							category: project.category
 						};
 						return <ProjectCard key={project.contentful_id} project={p} />;
 					})}
@@ -39,6 +40,7 @@ export const query = graphql`
 					shortDescription
 				}
 				name
+				category
 				contentful_id
 			}
 		}

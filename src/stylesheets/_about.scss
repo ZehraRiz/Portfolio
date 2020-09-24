@@ -1,4 +1,11 @@
 .about_container {
+    p{
+        line-height: 2.2rem;
+    }
+    a {
+        line-height: 1.28rem;
+    }
+   
     bottom: 0;
     width: 100%;
     display: grid;
@@ -21,4 +28,5 @@
 
 .button-container{
     grid-area: b;
+    padding-top: 2rem;
 }

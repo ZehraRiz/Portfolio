@@ -18,11 +18,11 @@ export const query = graphql`
 const about = ({ data }) => {
 	return (
 		<Layout page="about">
-			<div className="container about_container last-element">
+			<div className="container about_container ">
 				<Img
 					className= "about-image"
 					fluid={data.file.childImageSharp.fluid}
-					style={{ height: "100%", width: "50%", display: "inline"}}
+					style={{ height: "300px", width: "100%"}}
 					imgStyle={{ objectFit: "cover" }}
 				/>
 				<div className="home-description-container">
@@ -38,7 +38,7 @@ const about = ({ data }) => {
 					<br />
 					<p className="home_para">Currently, I am learning testing of web-apps through Jest and Enzyme.</p>
 				</div>
-				<div className="button-container">
+				<div className="button-container last-element">
 				<a className="btn " href ="https://drive.google.com/file/d/1IVzmLAYbHs3Gl8hSqNSt-M4QN4Eo5d06/view?usp=sharing" target="_blank" >Resume</a>
 				</div>
 			</div>
