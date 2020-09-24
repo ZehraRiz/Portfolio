@@ -7,23 +7,28 @@ export const ProjectCard = ({ project }) => {
 	const { name, description, live, code, image, slug } = project;
 	return (
 		<div className="project-card">
-			<Link to={`/projects/${slug}`} className= "project-image">
-				<Img fluid={image} 
-				style={{ height: 'calc(100%)' }}
-					imgStyle={{ objectFit: 'cover' }}
-				/>
-</Link>
+			{slug ? (
+				<Link to={`/projects/${slug}`} className="project-image">
+					<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "contain" }} />
+				</Link>
+			) : (
+				<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "contain" }} />
+			)}
+
 			<div className="project-card-description">
-				<h3 className="project-name">{name}</h3>
-				<p className="project-description p-small">
-					{description}
-					<span>
-						<Link className="pink" to={`/projects/${slug}`}>
-							{" "}
-							Read more...
+				<div>
+					<h3 className="project-name">{name}</h3>
+					<p className="project-description p-small">
+						React, MongoDB, Node
+						{/* {description} */}
+					</p>
+
+					{slug && (
+						<Link to={`/projects/${slug}`}>
+							<p className="pink">Read more...</p>
 						</Link>
-					</span>
-				</p>
+					)}
+				</div>
 				<div className="links">
 					<a className="link-btn " href={live} target="_blank">
 						Live preview
@@ -36,5 +41,3 @@ export const ProjectCard = ({ project }) => {
 		</div>
 	);
 };
-
-

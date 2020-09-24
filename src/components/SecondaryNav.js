@@ -25,9 +25,9 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 			</div> */}
 			<div className="secondary_nav-page-heading">
 				<h4>{page}<span className="pink">.</span></h4>
-			{/* {isProjectDescription === true && <Link to="/" className="link-btn">
+			{isProjectDescription === true && <Link to="/" className="link-btn">
 					 back to all projects
-				</Link>} */}
+				</Link>}
 			</div>
 		</div>
 	);

@@ -25,7 +25,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
 	{
-		allContentfulProjects {
+		allContentfulProjects (sort: {fields: createdAt})  {
 			nodes {
 				slug
 				liveUrl

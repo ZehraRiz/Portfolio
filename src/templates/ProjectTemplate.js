@@ -13,9 +13,9 @@ const ProjectTemplate = ({ data }) => {
 	const article = data.contentfulProjects.childContentfulProjectsDescriptionRichTextNode.json;
 	const options = {
 		renderNode: {
-			// [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
-			// 	<img className="article-image" src={`https:${node.data.target.fields.file["en-US"].url}`} />
-			// ),
+			[BLOCKS.EMBEDDED_ASSET]: (node, children) => (
+				<img className="article-image" src={`https:${node.data.target.fields.file["en-US"].url}`} />
+			),
 			[BLOCKS.PARAGRAPH]: (node, children) =>( <p className="article-p">{children}</p>),
 
 		},
