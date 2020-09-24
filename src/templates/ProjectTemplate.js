@@ -24,7 +24,7 @@ const ProjectTemplate = ({ data }) => {
 	};
 	return (
 		<Layout page={name} isProjectDescription={true}>
-			<div className="container project-details_container last-element">
+			<div className="container project-details_container">
 				<div className="project-details-blog">{documentToReactComponents(article, options)}</div>
 				<div className="project-details">
 					<div className="project-details-child">

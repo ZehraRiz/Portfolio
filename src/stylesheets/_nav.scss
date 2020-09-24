@@ -4,13 +4,18 @@ nav {
     top: 0;
     background-color: #fff;
     z-index: 120 !important;
-    p{
+    p {
         line-height: 2rem;
     }
     a {
         line-height: 1.28rem;
     }
-
+    @include media-md {
+        height: 7rem;
+        a {
+            line-height: 1.5rem;
+        }
+    }
 }
 
 .nav {
@@ -18,6 +23,15 @@ nav {
     position: relative;
     z-index: 120 !important;
     background-color: #fff;
+    @include media-md {
+        padding: 0 4rem;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .mobile-nav {
@@ -26,12 +40,29 @@ nav {
     padding: 0 2rem 1rem;
     justify-content: space-between;
     align-items: flex-end;
+    @include media-md {
+        flex: 1;
+        padding: 0;
+        width: auto;
+        height: auto;
+        justify-content: flex-end;
+        display: inline;
+        a {
+            display: inline;
+            h1 {
+                display: inline;
+            }
+        }
+    }
 }
 
 .nav-icon {
     height: 28px !important;
     width: 28px !important;
     z-index: 150 !important;
+    @include media-md {
+        display: none;
+    }
 }
 
 .overlay {
@@ -67,6 +98,18 @@ nav {
     transform-origin: 90% 0%;
     transform: scale(0);
     transition: transform 0.5s ease;
+    @include media-md {
+        flex: 1;
+        flex-direction: row;
+        height: 100%;
+        width: 50%;
+        top: auto;
+        position: relative;
+        transform-origin: none;
+        transform: scale(1);
+        width: auto;
+        justify-content: space-between;
+    }
 }
 
 .open .nav-list {
@@ -77,9 +120,14 @@ nav {
     font-family: $secondary-font;
     font-size: 1.3rem;
     letter-spacing: 0.25rem;
+    margin-right: -0.25rem;
     text-transform: uppercase;
     font-weight: 200;
     color: $main-font-color;
+    @include media-md {
+        font-size: 1.4rem;
+        letter-spacing: 0.25rem;
+    }
 }
 
 .active {
@@ -87,23 +135,45 @@ nav {
     text-decoration: underline;
     font-family: $secondary-font;
     font-size: 1.3rem;
+    margin-right: -0.25rem;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
     font-weight: 200;
+    @include media-md {
+        font-size: 1.4rem;
+    }
 }
 
 .secondary_nav-container {
     display: flex;
-    height: 18rem;
+    height: 14rem;
     flex-direction: column;
     justify-content: space-evenly;
+    @include media-md {
+        height: 20rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.secondary_nav-text {
+    @include media-md {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 .secondary_nav-icons {
+    @include media-md {
+        flex: 1;
+    }
     color: $main-font-color;
     text-align: right;
     a {
-        color: $main-font-color ;
+        color: $main-font-color;
     }
 }
 
@@ -111,18 +181,25 @@ nav {
     height: 22px !important;
     width: 22px !important;
     margin-right: 1.2rem;
+    @include media-md {
+        height: 28px !important;
+        width: 28px !important;
+        margin-right: 1.3rem;
+    }
 }
 
-.secondary_nav-divider{
-    color: $main-font-color ;
-    margin: 0 auto;
-    width: 100%;
-}
-
-
-.secondary_nav-page-heading{
-    margin: 2rem 0rem 1rem;
+.secondary_nav-page-heading {
+    margin: 0rem 0rem 1rem;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    @include media-md {
+        margin-bottom: 3rem;
+    }
+}
+
+.secondary_nav-heading {
+    @include media-md {
+        margin-bottom: 1rem;
+    }
 }

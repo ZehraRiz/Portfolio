@@ -1,32 +1,54 @@
 .about_container {
-    p{
+    p {
         line-height: 2.2rem;
     }
     a {
         line-height: 1.28rem;
     }
-   
+
     bottom: 0;
     width: 100%;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "i i"
-    "d d"
-    "b b"
+    grid-template-areas:
+        "i i"
+        "d d"
+        "b b";
+
+    @include media-md {
+        //        grid-template-areas:
+        // "i d"
+        // "i d"
+        // "i b";
+        // grid-gap: 1rem;
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .about-image {
-  grid-area: i;
+    grid-area: i;
+    height: 350px !important;
+    @include media-md {
+        height: 40rem !important;
+        overflow: hidden;
+    }
 }
 
 .home-description-container {
-   grid-area: d;
-   padding: 2rem 0rem;
+    grid-area: d;
+    padding: 2rem 0rem;
+    @include media-md {
+        height: 20rem;
+    }
 }
 
-.button-container{
+.button-container {
     grid-area: b;
     padding-top: 2rem;
+    
+    @include media-md {
+        padding-top: 0;
+    }
 }

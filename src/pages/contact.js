@@ -69,7 +69,7 @@ const Contact = () => {
 					<p className="temp-overlay-text pink">Sending...</p>
 				</div>
 			)}
-			<div className="container">
+			<div className="container contact_container">
 				<p>
 					{" "}
 					Need help? Contact me on <span className="pink">zehrataqi@gmail.com</span>
@@ -81,7 +81,7 @@ const Contact = () => {
 					<input type="text" id="lname" className="input input-l" placeholder="Last name" />
 					<input type="email" id="email" className="input input-e" placeholder="Email" />
 					<textarea id="message" className="input input-m" placeholder="Message" />
-					<input type="submit" value="Send" className="btn input-b last-element" />
+					<input type="submit" value="Send" className="btn input-b " />
 				</form>
 				{error && <p className="pink">Please fill all fields!!!</p>}
 				{loaded && <p className="pink">Sent successfully!!!</p>}

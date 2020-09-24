@@ -4,7 +4,8 @@ import { faGithubAlt, faGithub, faLinkedinIn, faTwitter } from "@fortawesome/fre
 import {  Link } from "gatsby";
 export const SecondaryNav = ({ page, isProjectDescription }) => {
 	return (
-		<div className="container secondary_nav-container">
+		<div className="container ">
+			<div className= "secondary_nav-container" >
 			<div className="secondary_nav-text">
 				<h2 className="secondary_nav-heading">
 					Hello! I am a passionate full-stack developer, meticulios app tester developer and skilled coder.
@@ -20,9 +21,8 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 				<a href="https://twitter.com/zehrataqi_"  target="_blank">
 				<FontAwesomeIcon icon={faTwitter} className="secondary_nav-icon" /></a>
 					</div>
-			{/* <div className="secondary_nav-divider">
-					<hr></hr>
-			</div> */}
+		
+			</div>
 			<div className="secondary_nav-page-heading">
 				<h4>{page}<span className="pink">.</span></h4>
 			{isProjectDescription === true && <Link to="/" className="link-btn">

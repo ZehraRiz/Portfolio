@@ -5,8 +5,3 @@
 @import "./contact";
 @import "./footer";
 
-@mixin media-md {
-    @media screen and (min-width: 750px){
-        @content; 
-    }
-}

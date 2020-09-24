@@ -6,7 +6,7 @@ export default function Home({ data }) {
 	const { allContentfulProjects: { nodes: projects } } = data;
 	return (
 		<Layout page="Projects">
-			<div className="container projects-container last-element">
+			<div className="container projects-container ">
 					{projects.map((project) => {
 						const p = {
 							name: project.name,

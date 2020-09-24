@@ -22,7 +22,7 @@ const about = ({ data }) => {
 				<Img
 					className= "about-image"
 					fluid={data.file.childImageSharp.fluid}
-					style={{ height: "300px", width: "100%"}}
+					style={{ height: "100%", width: "100%"}}
 					imgStyle={{ objectFit: "cover" }}
 				/>
 				<div className="home-description-container">
@@ -38,7 +38,7 @@ const about = ({ data }) => {
 					<br />
 					<p className="home_para">Currently, I am learning testing of web-apps through Jest and Enzyme.</p>
 				</div>
-				<div className="button-container last-element">
+				<div className="button-container ">
 				<a className="btn " href ="https://drive.google.com/file/d/1IVzmLAYbHs3Gl8hSqNSt-M4QN4Eo5d06/view?usp=sharing" target="_blank" >Resume</a>
 				</div>
 			</div>
