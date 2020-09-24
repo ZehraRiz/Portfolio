@@ -20,8 +20,10 @@ nav {
 
 .nav {
     width: 100%;
+    max-width: 140rem;
     position: relative;
     z-index: 120 !important;
+    margin: 0 auto;
     background-color: #fff;
     @include media-md {
         padding: 0 4rem;
@@ -32,6 +34,10 @@ nav {
         justify-content: space-between;
         align-items: center;
     }
+      
+      @include media-lg {
+          padding: 0 10rem;
+      }
 }
 
 .mobile-nav {
@@ -54,6 +60,9 @@ nav {
             }
         }
     }
+    @include media-lg {
+          flex: 2;
+      }
 }
 
 .nav-icon {
@@ -110,6 +119,7 @@ nav {
         width: auto;
         justify-content: space-between;
     }
+      
 }
 
 .open .nav-list {
@@ -155,6 +165,10 @@ nav {
         flex-direction: row;
         align-items: center;
     }
+     @include media-lg {
+             height: 15rem;
+            
+        }
 }
 
 .secondary_nav-text {
@@ -182,9 +196,14 @@ nav {
     width: 22px !important;
     margin-right: 1.2rem;
     @include media-md {
-        height: 28px !important;
-        width: 28px !important;
+        height: 25px !important;
+        width: 25px !important;
         margin-right: 1.3rem;
+    }
+      @include media-md {
+        height: 30px !important;
+        width: 30px !important;
+        margin-right: 1.5rem;
     }
 }
 

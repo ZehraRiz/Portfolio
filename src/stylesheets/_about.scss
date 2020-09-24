@@ -17,22 +17,31 @@
         "b b";
 
     @include media-md {
-        //        grid-template-areas:
-        // "i d"
-        // "i d"
-        // "i b";
-        // grid-gap: 1rem;
         width: 80%;
         margin: 0 auto;
+    };
+    @include media-lg {
+         grid-template-areas:
+        "i d"
+        "i d"
+        "i b";
+        grid-gap: 1rem;
+        
     }
+    
 }
 
 .about-image {
     grid-area: i;
     height: 350px !important;
     @include media-md {
+        height: 30rem !important;
+        overflow: hidden;
+    }
+    @include media-lg {
         height: 40rem !important;
         overflow: hidden;
+        margin-right: 2rem;
     }
 }
 
@@ -42,6 +51,11 @@
     @include media-md {
         height: 20rem;
     }
+      @include media-lg {
+        height: 30rem !important;
+        margin-left: 2rem;
+         padding: 4rem 2rem;
+    }
 }
 
 .button-container {
@@ -50,5 +64,10 @@
     
     @include media-md {
         padding-top: 0;
+    }
+       @include media-lg {
+        height: 10rem !important;
+        margin-left: 2rem;
+         padding: 2rem 2rem 4rem;
     }
 }

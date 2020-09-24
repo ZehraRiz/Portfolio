@@ -9,10 +9,10 @@ export const ProjectCard = ({ project }) => {
 		<div className="project-card">
 			{slug ? (
 				<Link to={`/projects/${slug}`} className="project-image">
-					<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "contain" }} />
+					<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />
 				</Link>
 			) : (
-				<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "contain" }} />
+				<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />
 			)}
 
 			<div className="project-card-description">
@@ -21,7 +21,7 @@ export const ProjectCard = ({ project }) => {
 					<p className="project-description p-small">
 						{category}	{slug && (
 						<Link to={`/projects/${slug}`}className="pink" >
-							<div >Read more...</div>
+							Read more...
 						</Link>
 					)}
 						{/* {description} */}

@@ -24,7 +24,16 @@ $nav-height: 6.5rem;
         @content; 
     }
 }
-
+@mixin media-lg {
+    @media screen and (min-width: 1280px){
+        @content; 
+    }
+}
+@mixin media-xl {
+    @media screen and (min-width: 1400px){
+        @content; 
+    }
+}
 
 html,
 body,
@@ -68,17 +77,22 @@ a {
 
 .section {
     margin-top: 7rem;
-    margin-bottom: 10rem;
     width: 100%;
-    
+    min-height: calc(100vh - 32rem);
     scroll-behavior: smooth;
 }
 
 .container {
     width: 100%;
+    max-width: 1399px;
+    margin: 0 auto;
     padding: 0rem 2rem;
      @include media-md {
              padding: 0rem 4rem;
+            
+        }
+         @include media-lg {
+             padding: 0rem 10rem;
             
         }
 }
@@ -196,7 +210,9 @@ p-small {
     color: $pink-color;
     display: block;
      @include media-md {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        letter-spacing: 0.15rem;
     }
 }
 
