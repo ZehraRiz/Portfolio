@@ -7,7 +7,7 @@ export default function Home({ data }) {
 	return (
 		<Layout page="Projects">
 			<div className="container projects-container ">
-					{projects.map((project) => {
+				{projects.map((project, i) => {
 						const p = {
 							name: project.name,
 							description: project.shortDescription.shortDescription,
@@ -17,7 +17,7 @@ export default function Home({ data }) {
 							slug: project.slug,
 							category: project.category
 						};
-						return <ProjectCard key={project.contentful_id} project={p} />;
+						return <ProjectCard key={project.contentful_id} project={p} i ={i}  />;
 					})}
 				</div>
 		</Layout>

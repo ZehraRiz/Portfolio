@@ -1,17 +1,58 @@
 .projects-container {
     width: 100%;
+    @include media-md {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 0.8fr 0.8fr;
+        grid-template-rows: (15rem auto);
+        grid-auto-flow: dense;
+        grid-gap: 3rem;
+    }
+    @include media-lg {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: (38rem auto);
+       
+    }
 }
 
 .project-card {
-    height: 380px;
-    // width: 300px;
     width: 100%;
     max-width: 100%;
+    height: 38rem;
     margin: 0rem auto 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: $light-grey-color;
+
+    @include media-md {
+        width: auto;
+        grid-row: span 2;
+        margin: 0;
+    }
+     @include media-lg {
+         grid-row: span 1;
+    }
+}
+
+.big {
+    @include media-md {
+        height: auto;
+        grid-row: span 3;
+
+        .project-card-description {
+            height: 25% !important;
+            min-height: 25% !important;
+        }
+
+        .project-image {
+            height: 75% !important;
+        }
+    }
+    @include media-lg {
+        height: 60rem;
+        grid-row: span 2;
+    }
 }
 
 .project-image {
@@ -65,14 +106,12 @@
     @include media-md {
         max-height: 600px;
     }
-    
 }
 
 .project-details-blog {
-    @include media-lg { 
+    @include media-lg {
         max-width: 800px;
     }
-   
 }
 
 .article-p {
@@ -83,14 +122,14 @@
 .project-details {
     margin-bottom: 1rem;
     text-align: left !important;
-    @include media-lg { 
+    @include media-lg {
         margin: 3rem 3rem;
     }
 }
 
 .project-details-child {
     margin-bottom: 1.5rem;
-    @include media-lg { 
+    @include media-lg {
         margin-bottom: 2.5rem;
     }
 }

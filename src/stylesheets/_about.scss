@@ -17,10 +17,12 @@
         "b b";
 
     @include media-md {
-        width: 80%;
+        // width: 80%;
+        // max-width: 120rem;
         margin: 0 auto;
     };
     @include media-lg {
+         grid-template-columns: 1fr 2fr;
          grid-template-areas:
         "i d"
         "i d"

@@ -3,10 +3,18 @@ import Image from "gatsby-image";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
-export const ProjectCard = ({ project }) => {
+export const ProjectCard = ({ project , i}) => {
 	const { name, description, live, code, image, slug, category } = project;
+	let big = false;
+	if (window.innerWidth >1280) {
+		big =  (i == 1) ||( i == 3) || (i==5);
+	}
+	else {
+		big =  (i == 1) ||( i == 3) || (i==4);
+	}
+	console.log(big)
 	return (
-		<div className="project-card">
+		<div className={big ? "project-card big" : "project-card"}>
 			{slug ? (
 				<Link to={`/projects/${slug}`} className="project-image">
 					<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />
