@@ -70,7 +70,7 @@ nav {
     width: 28px !important;
     z-index: 150 !important;
     @include media-md {
-        display: none;
+        display: none !important;
     }
 }
 

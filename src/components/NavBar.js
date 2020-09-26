@@ -18,7 +18,7 @@ export const NavBar = () => {
 			/>
 			<div className="nav">
 				<div className="mobile-nav">
-					<Link to="/index">
+					<Link to="/">
 						<h1>Z<span className="pink">.</span></h1>
 					</Link>
 					<FontAwesomeIcon
