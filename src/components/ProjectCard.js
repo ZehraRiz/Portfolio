@@ -7,18 +7,16 @@ export const ProjectCard = ({ project , i}) => {
 	const { name, description, live, code, image, slug, category } = project;
 	let big = false;
 
-	useEffect(() => {
-		if (window.innerWidth >1280) {
-		big =  (i == 1) ||( i == 3) || (i==5);
-	}
-	else {
-		big =  (i == 1) ||( i == 3) || (i==4);
-	}
-	}, [])
-	
+	// if (window.innerWidth >1280) {
+	// 	big =  (i == 1) ||( i == 3) || (i==5);
+	// }
+	// else {
+	// 	big =  (i == 1) ||( i == 3) || (i==4);
+	// 	}
+
 	return (
 
-		<div className={big ? "project-card big" : "project-card"}>
+		<div className= "project-card">
 			{slug ? (
 				<Link to={`/projects/${slug}`} className="project-image">
 					<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />

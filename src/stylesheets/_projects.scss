@@ -11,7 +11,6 @@
     @include media-lg {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: (38rem auto);
-       
     }
 }
 
@@ -30,12 +29,17 @@
         grid-row: span 2;
         margin: 0;
     }
-     @include media-lg {
-         grid-row: span 1;
+    @include media-lg {
+        grid-row: span 1;
     }
 }
 
-.big {
+.project-card:nth-child(2),
+.project-card:nth-child(4),
+.project-card:nth-child(6),
+.project-card:nth-child(10),
+.project-card:nth-child(14)
+{
     @include media-md {
         height: auto;
         grid-row: span 3;
@@ -54,6 +58,10 @@
         grid-row: span 2;
     }
 }
+
+
+
+
 
 .project-image {
     min-height: 60%;
