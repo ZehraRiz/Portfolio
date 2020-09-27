@@ -8,7 +8,7 @@ export const query = graphql`
 	query {
 		file(relativePath: { eq: "about.jpg" }) {
 			childImageSharp {
-				fluid(maxWidth: 400, quality: 100) {
+				fluid(maxWidth: 400, quality: 50) {
 					...GatsbyImageSharpFluid
 				}
 			}
@@ -26,7 +26,7 @@ const about = ({ data }) => {
 		<Layout page="about">
 			<div className="container about_container ">
 				<div className="about-image"
-			data-sal="slide-up"
+			data-sal="slide-right"
 			data-sal-duration="500"
 			data-sal-delay={animate ? "1000" : "200"}
 			data-sal-easing="ease-out"
@@ -53,7 +53,7 @@ const about = ({ data }) => {
 				</div>
 				
 				<div className="home-description-container"
-			data-sal="slide-up"
+			data-sal="slide-left"
 			data-sal-duration="500"
 			data-sal-delay={animate ? "1000" : "200"}
 			data-sal-easing="ease-out"

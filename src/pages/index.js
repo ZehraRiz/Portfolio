@@ -3,8 +3,7 @@ import { Layout, ProjectCard } from "../components";
 import { motion } from "framer-motion";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
-export default function Home({ data, animate }) {
-	console.log(animate)
+export default function Home({ data }) {
 	const { allContentfulProjects: { nodes: projects } } = data;
 	
 

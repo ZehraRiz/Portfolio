@@ -13,16 +13,14 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "i i"
-        "d d"
-        "b b";
+        "d d";
 
     @include media-md {
         margin: 0 auto;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "i d"
-            "i d"
-            "i b";
+            "i d";
         grid-gap: 1rem;
     }
 }
@@ -45,37 +43,13 @@
     grid-area: d;
     padding: 2rem 0rem;
     @include media-md {
-        height: 20rem;
+        height: 30rem;
         margin-left: 2rem;
     }
     @include media-lg {
-        height: 20rem !important;
+        height: 40rem !important;
         padding: 4rem 2rem;
         margin: auto 0;
     }
 }
 
-.button-container {
-    grid-area: b;
-    padding-top: 2rem;
-
-    @include media-md {
-        height: 10rem !important;
-        margin-left: 2rem;
-        position: relative;
-        a {
-           position: absolute;
-           bottom: 0;
-           transform: translateY(-1.2rem);
-        }
-    }
-    @include media-lg {
-       height: 20rem;
-
-       a {
-           top: 25%;
-           bottom: auto;
-
-       }
-        }
-}

@@ -5,8 +5,8 @@ import "../stylesheets/style.scss";
 export const Layout = ({ children, page, isProjectDescription }) => {
 	useEffect(() => {
 		if (window.sessionStorage.getItem("firstLoadDone") === null) {
-			// return;
-			window.sessionStorage.setItem("firstLoadDone", 1)
+			 return;
+			//window.sessionStorage.setItem("firstLoadDone", 1)
 		}
 	}, []);
 
