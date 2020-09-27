@@ -2,7 +2,6 @@ import React from "react";
 import { Layout, ProjectCard } from "../components";
 import { motion } from "framer-motion";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import Bounce from "react-reveal/Bounce";
 
 export default function Home({ data, animate }) {
 	console.log(animate)
