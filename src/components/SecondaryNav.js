@@ -25,7 +25,7 @@ const subheadvariants = {
 		transition: {
 			type: "tween",
 			duration: 1,
-			delay: 1,
+			delay: .8,
 			stiffness: 40
 		}
 	},
@@ -38,7 +38,7 @@ const socialvariants = {
 		opacity: 1,
 		transition: {
 			type: "tween",
-			delay: 1.5,
+			delay: .8,
 			duration: 0.2, stiffness: 80
 		}
 	},

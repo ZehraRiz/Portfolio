@@ -17,61 +17,34 @@ export const query = graphql`
 `;
 
 const about = ({ data }) => {
-		let animate = true
-	if (typeof window !== 'undefined') {
-			animate = !window.sessionStorage.getItem("firstLoadDone");
-}
+	let animate = true;
+	if (typeof window !== "undefined") {
+		animate = !window.sessionStorage.getItem("firstLoadDone");
+	}
 
 	return (
 		<Layout page="about">
 			<div className="container about_container ">
-				<div className="about-image"
-					style={{animationDuration: 2000}}
-			data-sal="slide-right"
-			data-sal-duration="500"
-			data-sal-easing="ease-out"
-					// initial={{
-					// 	x: "-100vw",
-					// 	opacity: 0
-					// }}
-
-					// animate={{
-					// 	x: "0",
-					// 	opacity: 1
-					// }}
-					// transition={{
-					// 	type: "tween",
-					// 	ease: "easeOut",
-					// 	duration: 1
-					// }}
-				>
+				<div
+					className="about-image"
+					data-sal="slide-right"
+					data-sal-duration="500"
+					data-sal-delay={animate ? "1000" : "200"}
+					data-sal-easing="ease-out">
 					<Img
-					fluid={data.file.childImageSharp.fluid}
-					style={{ height: "100%", width: "100%"}}
-					imgStyle={{ objectFit: "cover" }}
-				/>
+						fluid={data.file.childImageSharp.fluid}
+						style={{ height: "100%", width: "100%" }}
+						imgStyle={{ objectFit: "cover" }}
+					/>
 				</div>
-				
-				<div className="home-description-container"
-			data-sal="slide-left"
-			data-sal-duration="500"
-			data-sal-delay={animate ? "1000" : "200"}
-			data-sal-easing="ease-out"
-					// initial={{
-					// 	x: "100vw",
-					// 	opacity: 0
-					// }}
 
-					// animate={{
-					// 	x: "0",
-					// 	opacity: 1
-					// }}
-					// transition={{
-					// 	type: "tween",
-					// 	duration: 1,
-					// 	ease: "easeOut",
-					// }}
-				>
+				<div
+					className="home-description-container"
+					data-sal="slide-left"
+					data-sal-duration="500"
+					data-sal-delay={animate ? "1000" : "200"}
+					data-sal-easing="ease-out">
+				
 					<p className="home_para">
 						I am a full Stack Develope who is always keen on learning new technologies amd make use of them
 						in my projects.
@@ -104,7 +77,6 @@ const about = ({ data }) => {
 				<a className="btn " href ="https://drive.google.com/file/d/1IVzmLAYbHs3Gl8hSqNSt-M4QN4Eo5d06/view?usp=sharing" target="_blank" >Resume</a>
 				</motion.div> */}
 			</div>
-
 		</Layout>
 	);
 };
