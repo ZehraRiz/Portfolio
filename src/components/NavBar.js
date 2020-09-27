@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby"; // to query for image data
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import { Link } from "gatsby";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import {ProjectsLink} from "../components"
+import { ProjectsLink } from "../components";
 
-export const NavBar = () => {
+export const NavBar = ({ page }) => {
 	const [ isOpen, setIsOpen ] = useState(false);
 
 	return (
@@ -19,7 +20,19 @@ export const NavBar = () => {
 			<div className="nav">
 				<div className="mobile-nav">
 					<Link to="/">
-						<h1>Z<span className="pink">.</span></h1>
+						{page === "Projects" ? (
+								<motion.h1
+									initial={{ y: -200 }}
+									animate={{ y: 0 }}
+									transition={{ type: "spring", duration: 0.2, stiffness: 120 }}>
+									Z<span className="pink">.</span>
+								</motion.h1>
+							) : (
+								<h1>
+									Z<span className="pink">.</span>
+								</h1>
+							)
+						}
 					</Link>
 					<FontAwesomeIcon
 						className="nav-icon"
@@ -31,14 +44,65 @@ export const NavBar = () => {
 				</div>
 
 				<ul className="nav-list">
-					<li className="nav-item">
+					{page === "Projects" ?
+						(
+							<>
+								<motion.li
+						className="nav-item"
+						initial={{ y: -200 }}
+						animate={{ y: 0 }}
+						transition={{ type: "spring", duration: 0.2, stiffness: 80 }}>
 						<h2>
 							<ProjectsLink to="/" className="nav-link">
 								Projects
-								</ProjectsLink>
+							</ProjectsLink>
+						</h2>
+					</motion.li>
+					<motion.li
+						initial={{ y: -200 }}
+						animate={{ y: 0 }}
+						transition={{ type: "spring", duration: 0.2, delay: 0.2, stiffness: 80 }}
+						className="nav-item">
+						<h2>
+							<Link to="/about" className="nav-link" activeClassName="active">
+								About
+							</Link>
+						</h2>
+					</motion.li>
+					{/* <li>
+						<h2>
+							<Link to="/blog" className="nav-link" activeClassName="active">
+								Blog
+							</Link>
+						</h2>
+					</li> */}
+					<motion.li
+						initial={{ y: -200 }}
+						animate={{ y: 0 }}
+						transition={{ type: "spring", duration: 0.2, delay: 0.4, stiffness: 80 }}
+						className="nav-item">
+						<h2>
+							<Link to="/contact" className="nav-link" activeClassName="active">
+								Contact
+							</Link>
+						</h2>
+					</motion.li>
+
+								</>
+
+						): (
+								<>
+								<li
+						className="nav-item">
+						<h2>
+							<ProjectsLink to="/" className="nav-link">
+								Projects
+							</ProjectsLink>
 						</h2>
 					</li>
-					<li className="nav-item">
+					<li
+						
+						className="nav-item">
 						<h2>
 							<Link to="/about" className="nav-link" activeClassName="active">
 								About
@@ -52,13 +116,19 @@ export const NavBar = () => {
 							</Link>
 						</h2>
 					</li> */}
-					<li>
+					<li
+					
+						className="nav-item">
 						<h2>
 							<Link to="/contact" className="nav-link" activeClassName="active">
 								Contact
 							</Link>
 						</h2>
 					</li>
+							</>	
+						)
+					}
+					
 				</ul>
 			</div>
 		</nav>

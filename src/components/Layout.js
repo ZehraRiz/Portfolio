@@ -6,7 +6,7 @@ export const Layout = ({ children, page, isProjectDescription }) => {
 	return (
 		<Fragment>
 			<div className="layout">
-				<NavBar />
+				<NavBar page={page}  />
 				<section className="section">
 					<SecondaryNav page={page} isProjectDescription={isProjectDescription} />
 					{children}
