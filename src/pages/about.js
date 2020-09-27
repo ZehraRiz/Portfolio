@@ -26,9 +26,9 @@ const about = ({ data }) => {
 		<Layout page="about">
 			<div className="container about_container ">
 				<div className="about-image"
+					style={{animationDuration: 2000}}
 			data-sal="slide-right"
 			data-sal-duration="500"
-			data-sal-delay={animate ? "1000" : "200"}
 			data-sal-easing="ease-out"
 					// initial={{
 					// 	x: "-100vw",

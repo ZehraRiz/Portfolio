@@ -9,7 +9,7 @@ const h2variants = {
 		x: 0,
 		opacity: 1,
 		transition: {
-			delay: 0.5,
+			delay: 0,
 			duration: 1,
 			type: "tween",
 			ease: "anticipate"
@@ -25,7 +25,7 @@ const subheadvariants = {
 		transition: {
 			type: "tween",
 			duration: 1,
-			delay: 1.2,
+			delay: 1,
 			stiffness: 40
 		}
 	},
@@ -34,16 +34,15 @@ const subheadvariants = {
 
 const socialvariants = {
 	visible: {
-		x: 0,
+		y: 0,
 		opacity: 1,
 		transition: {
 			type: "tween",
-			duration: 1,
-			delay: 1.3,
-			stiffness: 40
+			delay: 1.5,
+			duration: 0.2, stiffness: 80
 		}
 	},
-	hidden: { x: "100%", opacity: 0 }
+	hidden: { y: -200, opacity: 0 }
 };
 
 const pageheadVariants = {
@@ -53,11 +52,11 @@ const pageheadVariants = {
 		transition: {
 			type: "tween",
 			duration: 1,
-			delay: 1,
+			delay: 0,
 			stiffness: 60
 		}
 	},
-	hidden: { x: "100%", opacity: 0 }
+	hidden: { x: "-100%", opacity: 0 }
 };
 
 const empty = {
