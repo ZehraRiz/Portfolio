@@ -1,13 +1,19 @@
 import React from "react";
 import { Layout, ProjectCard } from "../components";
+import { motion } from "framer-motion";
 import { graphql, useStaticQuery, Link } from "gatsby";
+import Bounce from "react-reveal/Bounce";
+
 
 export default function Home({ data }) {
 	const { allContentfulProjects: { nodes: projects } } = data;
+
 	return (
 		<Layout page="Projects">
+			
+			
 			<div className="container projects-container ">
-				{projects.map((project, i) => {
+					{projects.map((project, i) => {
 						const p = {
 							name: project.name,
 							description: project.shortDescription.shortDescription,
@@ -17,16 +23,19 @@ export default function Home({ data }) {
 							slug: project.slug,
 							category: project.category
 						};
-						return <ProjectCard key={project.contentful_id} project={p} i ={i}  />;
-					})}
-				</div>
+						return (
+							
+							<ProjectCard key={project.contentful_id} project={p} i={i} />);
+					})}</div>
+				
+			
 		</Layout>
 	);
 }
 
 export const query = graphql`
 	{
-		allContentfulProjects (sort: {fields: createdAt})  {
+		allContentfulProjects(sort: { fields: createdAt }) {
 			nodes {
 				slug
 				liveUrl

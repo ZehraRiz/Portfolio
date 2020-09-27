@@ -2,6 +2,7 @@ import React, {useEffect} from "react";
 import Image from "gatsby-image";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
+import Fade from 'react-reveal/Fade';
 
 export const ProjectCard = ({ project , i}) => {
 	const { name, description, live, code, image, slug, category } = project;
@@ -15,7 +16,7 @@ export const ProjectCard = ({ project , i}) => {
 	// 	}
 
 	return (
-
+		 <Fade bottom cascade>
 		<div className= "project-card">
 			{slug ? (
 				<Link to={`/projects/${slug}`} className="project-image">
@@ -50,5 +51,6 @@ export const ProjectCard = ({ project , i}) => {
 				</div>
 			</div>
 		</div>
+		</Fade>
 	);
 };

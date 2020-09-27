@@ -6,8 +6,56 @@ import { Link } from "gatsby";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ProjectsLink } from "../components";
 
-export const NavBar = ({ page }) => {
+const h1variants = {
+	visible: {
+		y: 0,
+		transition: {
+			type: "spring",
+			duration: 0.2,
+			stiffness: 180
+		}
+	},
+	hidden: { y: -200 }
+};
+
+const nav1Variants = {
+	visible: {
+		y: 0,
+		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: 0.1}
+	},
+	hidden: {
+		y: -200
+	}
+};
+
+const nav2Variants = {
+	visible: {
+		y: 0,
+		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: 0.3 }
+	},
+	hidden: {
+		y: -200
+	}
+};
+
+const nav3Variants = {
+	visible: {
+		y: 0,
+		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: 0.5 }
+	},
+	hidden: {
+		y: -200
+	}
+};
+
+const empty = {
+	visible: {},
+	hidden: {}
+};
+
+export const NavBar = () => {
 	const [ isOpen, setIsOpen ] = useState(false);
+	const animate = !window.sessionStorage.getItem("firstLoadDone");
 
 	return (
 		<nav className={isOpen ? "open" : ""}>
@@ -19,21 +67,14 @@ export const NavBar = ({ page }) => {
 			/>
 			<div className="nav">
 				<div className="mobile-nav">
-					<Link to="/">
-						{page === "Projects" ? (
-								<motion.h1
-									initial={{ y: -200 }}
-									animate={{ y: 0 }}
-									transition={{ type: "spring", duration: 0.2, stiffness: 120 }}>
-									Z<span className="pink">.</span>
-								</motion.h1>
-							) : (
-								<h1>
-									Z<span className="pink">.</span>
-								</h1>
-							)
-						}
-					</Link>
+					<motion.div variants={animate? h1variants : empty} initial="hidden" animate="visible">
+						<Link to="/">
+							<h1>
+								Z<span className="pink">.</span>
+							</h1>
+						</Link>
+					</motion.div>
+
 					<FontAwesomeIcon
 						className="nav-icon"
 						icon={faBars}
@@ -44,14 +85,11 @@ export const NavBar = ({ page }) => {
 				</div>
 
 				<ul className="nav-list">
-					{page === "Projects" ?
-						(
-							<>
-								<motion.li
+					<motion.li
 						className="nav-item"
-						initial={{ y: -200 }}
-						animate={{ y: 0 }}
-						transition={{ type: "spring", duration: 0.2, stiffness: 80 }}>
+						variants={animate ? nav1Variants : empty}
+						initial="hidden"
+						animate="visible">
 						<h2>
 							<ProjectsLink to="/" className="nav-link">
 								Projects
@@ -59,9 +97,9 @@ export const NavBar = ({ page }) => {
 						</h2>
 					</motion.li>
 					<motion.li
-						initial={{ y: -200 }}
-						animate={{ y: 0 }}
-						transition={{ type: "spring", duration: 0.2, delay: 0.2, stiffness: 80 }}
+						variants={animate ? nav2Variants : empty}
+						initial="hidden"
+						animate="visible"
 						className="nav-item">
 						<h2>
 							<Link to="/about" className="nav-link" activeClassName="active">
@@ -77,9 +115,9 @@ export const NavBar = ({ page }) => {
 						</h2>
 					</li> */}
 					<motion.li
-						initial={{ y: -200 }}
-						animate={{ y: 0 }}
-						transition={{ type: "spring", duration: 0.2, delay: 0.4, stiffness: 80 }}
+						variants={animate ? nav3Variants : empty}
+						initial="hidden"
+						animate="visible"
 						className="nav-item">
 						<h2>
 							<Link to="/contact" className="nav-link" activeClassName="active">
@@ -87,48 +125,6 @@ export const NavBar = ({ page }) => {
 							</Link>
 						</h2>
 					</motion.li>
-
-								</>
-
-						): (
-								<>
-								<li
-						className="nav-item">
-						<h2>
-							<ProjectsLink to="/" className="nav-link">
-								Projects
-							</ProjectsLink>
-						</h2>
-					</li>
-					<li
-						
-						className="nav-item">
-						<h2>
-							<Link to="/about" className="nav-link" activeClassName="active">
-								About
-							</Link>
-						</h2>
-					</li>
-					{/* <li>
-						<h2>
-							<Link to="/blog" className="nav-link" activeClassName="active">
-								Blog
-							</Link>
-						</h2>
-					</li> */}
-					<li
-					
-						className="nav-item">
-						<h2>
-							<Link to="/contact" className="nav-link" activeClassName="active">
-								Contact
-							</Link>
-						</h2>
-					</li>
-							</>	
-						)
-					}
-					
 				</ul>
 			</div>
 		</nav>
