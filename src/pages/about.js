@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "../components";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import { motion } from "framer-motion";
 
 export const query = graphql`
 	query {
@@ -16,16 +17,61 @@ export const query = graphql`
 `;
 
 const about = ({ data }) => {
+		let animate = true
+	if (typeof window !== 'undefined') {
+			animate = !window.sessionStorage.getItem("firstLoadDone");
+}
+
 	return (
 		<Layout page="about">
 			<div className="container about_container ">
-				<Img
-					className= "about-image"
+				<div className="about-image"
+			data-sal="slide-up"
+			data-sal-duration="500"
+			data-sal-delay={animate ? "1000" : "200"}
+			data-sal-easing="ease-out"
+					// initial={{
+					// 	x: "-100vw",
+					// 	opacity: 0
+					// }}
+
+					// animate={{
+					// 	x: "0",
+					// 	opacity: 1
+					// }}
+					// transition={{
+					// 	type: "tween",
+					// 	ease: "easeOut",
+					// 	duration: 1
+					// }}
+				>
+					<Img
 					fluid={data.file.childImageSharp.fluid}
 					style={{ height: "100%", width: "100%"}}
 					imgStyle={{ objectFit: "cover" }}
 				/>
-				<div className="home-description-container">
+				</div>
+				
+				<div className="home-description-container"
+			data-sal="slide-up"
+			data-sal-duration="500"
+			data-sal-delay={animate ? "1000" : "200"}
+			data-sal-easing="ease-out"
+					// initial={{
+					// 	x: "100vw",
+					// 	opacity: 0
+					// }}
+
+					// animate={{
+					// 	x: "0",
+					// 	opacity: 1
+					// }}
+					// transition={{
+					// 	type: "tween",
+					// 	duration: 1,
+					// 	ease: "easeOut",
+					// }}
+				>
 					<p className="home_para">
 						I am a full Stack Develope who is always keen on learning new technologies amd make use of them
 						in my projects.
@@ -38,9 +84,25 @@ const about = ({ data }) => {
 					<br />
 					<p className="home_para">Currently, I am learning testing of web-apps through Jest and Enzyme.</p>
 				</div>
-				<div className="button-container ">
+				{/* <motion.div className="button-container "
+				
+				initial={{
+						x: "100vw",
+						opacity: 0
+					}}
+
+					animate={{
+						x: "0",
+						opacity: 1,
+						
+					}}
+					transition={{
+						type: "tween",
+						duration: 1,
+						ease: "easeOut",
+					}}>
 				<a className="btn " href ="https://drive.google.com/file/d/1IVzmLAYbHs3Gl8hSqNSt-M4QN4Eo5d06/view?usp=sharing" target="_blank" >Resume</a>
-				</div>
+				</motion.div> */}
 			</div>
 
 		</Layout>

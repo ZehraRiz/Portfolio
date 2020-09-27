@@ -4,31 +4,27 @@ import { motion } from "framer-motion";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import Bounce from "react-reveal/Bounce";
 
-
-export default function Home({ data }) {
+export default function Home({ data, animate }) {
+	console.log(animate)
 	const { allContentfulProjects: { nodes: projects } } = data;
+	
 
 	return (
 		<Layout page="Projects">
-			
-			
-			<div className="container projects-container ">
-					{projects.map((project, i) => {
-						const p = {
-							name: project.name,
-							description: project.shortDescription.shortDescription,
-							live: project.liveUrl,
-							code: project.githubUrl,
-							image: project.displayImage.fluid,
-							slug: project.slug,
-							category: project.category
-						};
-						return (
-							
-							<ProjectCard key={project.contentful_id} project={p} i={i} />);
-					})}</div>
-				
-			
+			<div className="container projects-container">
+				{projects.map((project, i) => {
+					const p = {
+						name: project.name,
+						description: project.shortDescription.shortDescription,
+						live: project.liveUrl,
+						code: project.githubUrl,
+						image: project.displayImage.fluid,
+						slug: project.slug,
+						category: project.category
+					};
+					return <ProjectCard key={project.contentful_id} project={p} i={i} />;
+				})}
+			</div>
 		</Layout>
 	);
 }

@@ -1,12 +1,15 @@
-
 import React, { useState, useEffect } from "react";
 import { Layout } from "../components";
 const axios = require("axios");
 
 const Contact = () => {
+		let animate = true
+	if (typeof window !== 'undefined') {
+			animate = !window.sessionStorage.getItem("firstLoadDone");
+}
 	const [ error, setError ] = useState(false);
-	const [loading, setLoading] = useState(false);
-	const [loaded, setLoaded] = useState(false)
+	const [ loading, setLoading ] = useState(false);
+	const [ loaded, setLoaded ] = useState(false);
 
 	useEffect(
 		() => {
@@ -20,7 +23,7 @@ const Contact = () => {
 		[ error ]
 	);
 
-		useEffect(
+	useEffect(
 		() => {
 			if (loaded) {
 				let timer1 = setTimeout(() => setLoaded(false), 3000);
@@ -31,7 +34,6 @@ const Contact = () => {
 		},
 		[ loaded ]
 	);
-
 
 	const formSubmit = (e) => {
 		e.preventDefault();
@@ -49,12 +51,12 @@ const Contact = () => {
 				email,
 				message
 			};
-			setLoading(true)
+			setLoading(true);
 			axios
 				.post("https://zehrataqvi.herokuapp.com/email", data)
 				.then((res) => {
 					setLoading(false);
-					setLoaded(true)
+					setLoaded(true);
 				})
 				.catch((err) => {
 					console.log(err);
@@ -70,13 +72,29 @@ const Contact = () => {
 				</div>
 			)}
 			<div className="container contact_container">
-				<p>
+				<p
+					data-sal="slide-up"
+					data-sal-duration="500"
+					data-sal-delay={animate ? "1000" : "200"}
+					data-sal-easing="ease-out">
 					{" "}
 					Need help? Contact me on <span className="pink">zehrataqi@gmail.com</span>
 				</p>
 				<br />
-				<p>I am always open to discussing new ideas and opportunities. Write to me</p>
-				<form onSubmit={formSubmit} className="contact-form">
+				<p
+					data-sal="slide-up"
+					data-sal-duration="500"
+					data-sal-delay={animate ? "1000" : "200"}
+					data-sal-easing="ease-out">
+					I am always open to discussing new ideas and opportunities. Write to me
+				</p>
+				<form
+					onSubmit={formSubmit}
+					className="contact-form"
+					data-sal="slide-up"
+					data-sal-duration="500"
+					data-sal-delay={animate ? "1000" : "200"}
+					data-sal-easing="ease-out">
 					<input type="text" id="name" className="input input-f" placeholder="First name" />
 					<input type="text" id="lname" className="input input-l" placeholder="Last name" />
 					<input type="email" id="email" className="input input-e" placeholder="Email" />

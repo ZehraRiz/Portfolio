@@ -55,7 +55,10 @@ const empty = {
 
 export const NavBar = () => {
 	const [ isOpen, setIsOpen ] = useState(false);
-	const animate = !window.sessionStorage.getItem("firstLoadDone");
+		let animate = true
+	if (typeof window !== 'undefined') {
+			animate = !window.sessionStorage.getItem("firstLoadDone");
+}
 
 	return (
 		<nav className={isOpen ? "open" : ""}>

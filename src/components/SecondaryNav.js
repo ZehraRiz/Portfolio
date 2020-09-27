@@ -9,7 +9,7 @@ const h2variants = {
 		x: 0,
 		opacity: 1,
 		transition: {
-			delay: .5,
+			delay: 0.5,
 			duration: 1,
 			type: "tween",
 			ease: "anticipate"
@@ -34,12 +34,26 @@ const subheadvariants = {
 
 const socialvariants = {
 	visible: {
-		x:0,
+		x: 0,
 		opacity: 1,
 		transition: {
 			type: "tween",
-			duration: 1 ,
-			delay: 1.4,
+			duration: 1,
+			delay: 1.3,
+			stiffness: 40
+		}
+	},
+	hidden: { x: "100%", opacity: 0 }
+};
+
+const pageheadVariants = {
+	visible: {
+		x: 0,
+		opacity: 1,
+		transition: {
+			type: "tween",
+			duration: 1,
+			delay: 1,
 			stiffness: 60
 		}
 	},
@@ -52,7 +66,10 @@ const empty = {
 };
 
 export const SecondaryNav = ({ page, isProjectDescription }) => {
-	const animate = !window.sessionStorage.getItem("firstLoadDone");
+		let animate = true
+	if (typeof window !== 'undefined') {
+			animate = !window.sessionStorage.getItem("firstLoadDone");
+}
 
 	return (
 		<div className="container ">
@@ -92,7 +109,10 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 					</a>
 				</motion.div>
 			</div>
-			<div className="secondary_nav-page-heading">
+			<motion.div
+				variants={animate ? pageheadVariants : empty}
+				initial="hidden"
+					animate="visible" className="secondary_nav-page-heading">
 				<h4>
 					{page}
 					<span className="pink">.</span>
@@ -102,7 +122,7 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 						back to all projects
 					</Link>
 				)}
-			</div>
+			</motion.div>
 		</div>
 	);
 };

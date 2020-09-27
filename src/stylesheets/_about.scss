@@ -17,20 +17,14 @@
         "b b";
 
     @include media-md {
-        // width: 80%;
-        // max-width: 120rem;
         margin: 0 auto;
-    };
-    @include media-lg {
-         grid-template-columns: 1fr 2fr;
-         grid-template-areas:
-        "i d"
-        "i d"
-        "i b";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "i d"
+            "i d"
+            "i b";
         grid-gap: 1rem;
-        
     }
-    
 }
 
 .about-image {
@@ -39,11 +33,11 @@
     @include media-md {
         height: 30rem !important;
         overflow: hidden;
+        margin-right: 2rem;
     }
     @include media-lg {
         height: 40rem !important;
         overflow: hidden;
-        margin-right: 2rem;
     }
 }
 
@@ -52,24 +46,36 @@
     padding: 2rem 0rem;
     @include media-md {
         height: 20rem;
-    }
-      @include media-lg {
-        height: 30rem !important;
         margin-left: 2rem;
-         padding: 4rem 2rem;
+    }
+    @include media-lg {
+        height: 20rem !important;
+        padding: 4rem 2rem;
+        margin: auto 0;
     }
 }
 
 .button-container {
     grid-area: b;
     padding-top: 2rem;
-    
+
     @include media-md {
-        padding-top: 0;
-    }
-       @include media-lg {
         height: 10rem !important;
         margin-left: 2rem;
-         padding: 2rem 2rem 4rem;
+        position: relative;
+        a {
+           position: absolute;
+           bottom: 0;
+           transform: translateY(-1.2rem);
+        }
     }
+    @include media-lg {
+       height: 20rem;
+
+       a {
+           top: 25%;
+           bottom: auto;
+
+       }
+        }
 }

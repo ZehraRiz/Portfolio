@@ -6,6 +6,10 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import { Layout } from "../components";
 
 const ProjectTemplate = ({ data }) => {
+	let animate = true
+	if (typeof window !== 'undefined') {
+			animate = !window.sessionStorage.getItem("firstLoadDone");
+}
 	const name = data.contentfulProjects.name;
 	const liveUrl = data.contentfulProjects.liveUrl;
 	const githubUrl = data.contentfulProjects.githubUrl;
@@ -25,8 +29,14 @@ const ProjectTemplate = ({ data }) => {
 	return (
 		<Layout page={name} isProjectDescription={true}>
 			<div className="container project-details_container">
-				<div className="project-details-blog">{documentToReactComponents(article, options)}</div>
-				<div className="project-details">
+				<div 
+					className="project-details-blog">{documentToReactComponents(article, options)}</div>
+				<div className="project-details"
+					// data-sal="slide-up"
+					// data-sal-duration="500"
+					// data-sal-delay={animate ? "1000" : "200"}
+					// data-sal-easing="ease-out"
+				>
 					<div className="project-details-child">
 						<h5>Project Category</h5>
 						<p>{category}</p>
