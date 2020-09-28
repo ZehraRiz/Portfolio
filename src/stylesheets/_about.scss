@@ -7,7 +7,7 @@
     }
 
     bottom: 0;
-    width: 100%;
+    width: 40rem;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -16,20 +16,27 @@
         "d d";
 
     @include media-md {
+        width: 60rem;
         margin: 0 auto;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-            "i d"
-            "i d";
         grid-gap: 1rem;
     }
+
+     @include media-lg {
+         width: 100rem;
+          grid-template-areas:
+            "i d"
+            "i d";
+     }
+     @include media-xl {
+         width: 120rem;
+     }
 }
 
 .about-image {
     grid-area: i;
     height: 350px !important;
     @include media-md {
-        height: 30rem !important;
+        height: 40rem !important;
         overflow: hidden;
         margin-right: 2rem;
     }
@@ -44,7 +51,10 @@
     padding: 2rem 0rem;
     @include media-md {
         height: 30rem;
-        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
     }
     @include media-lg {
         height: 40rem !important;

@@ -122,6 +122,8 @@ nav {
       
 }
 
+
+
 .open .nav-list {
     transform: scale(1);
 }
@@ -134,11 +136,18 @@ nav {
     text-transform: uppercase;
     font-weight: 200;
     color: $main-font-color;
+    transition: color .1s ease;
     @include media-md {
         font-size: 1.4rem;
         letter-spacing: 0.25rem;
     }
 }
+
+.nav-link:hover, .nav-link:focus {
+    color: $pink-color;
+    text-decoration: underline;
+}
+
 
 .active {
     color: $pink-color;
@@ -149,10 +158,12 @@ nav {
     letter-spacing: 0.25rem;
     text-transform: uppercase;
     font-weight: 200;
+    transition: all .6s ease;
     @include media-md {
         font-size: 1.4rem;
     }
 }
+
 
 .secondary_nav-container {
     display: flex;
@@ -195,16 +206,16 @@ nav {
     height: 22px !important;
     width: 22px !important;
     margin-right: 1.2rem;
+    transition: all .1s ease;
     @include media-md {
         height: 25px !important;
         width: 25px !important;
         margin-right: 1.3rem;
     }
-    //   @include media-md {
-    //     height: 30px !important;
-    //     width: 30px !important;
-    //     margin-right: 1.5rem;
-    // }
+}
+
+.secondary_nav-icon:hover, .secondary_nav-icon:focus {
+    scale: 1.15;
 }
 
 .secondary_nav-page-heading {
