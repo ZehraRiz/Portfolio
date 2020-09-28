@@ -20,43 +20,41 @@ const h2variants = {
 
 const subheadvariants = {
 	visible: {
-		y: 0,
+		x:0,
 		opacity: 1,
 		transition: {
-			type: "tween",
+		delay: .2,
 			duration: 1,
-			delay: .8,
-			stiffness: 40
+			type: "tween",
+			ease: "anticipate"
 		}
 	},
-	hidden: { y: "-200%", opacity: 0 }
+	hidden: { x: "-100%", opacity: 0 }
 };
 
 const socialvariants = {
 	visible: {
-		y: 0,
+		x: 0,
 		opacity: 1,
 		transition: {
+		delay: .2,
+			duration: 1,
 			type: "tween",
-			delay: .8,
-			duration: 0.2, stiffness: 80
+			ease: "anticipate"
 		}
 	},
-	hidden: { y: -200, opacity: 0 }
+	hidden: {  x: "100%", opacity: 0 }
 };
 
 const pageheadVariants = {
 	visible: {
-		x: 0,
-		opacity: 1,
+		y: 0,
 		transition: {
-			type: "tween",
-			duration: 1,
-			delay: 0,
-			stiffness: 60
+			type: "spring",
+			stiffness: 80,
 		}
 	},
-	hidden: { x: "-100%", opacity: 0 }
+	hidden: { y: "-100vh" }
 };
 
 const empty = {

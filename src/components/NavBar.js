@@ -11,17 +11,16 @@ const h1variants = {
 		y: 0,
 		transition: {
 			type: "spring",
-			duration: 0.2,
-			stiffness: 180
+			stiffness: 80,
 		}
 	},
-	hidden: { y: -200 }
+	hidden: { y: "-100vh" }
 };
 
 const nav1Variants = {
 	visible: {
 		y: 0,
-		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: .8}
+		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: .7}
 	},
 	hidden: {
 		y: -200
@@ -31,7 +30,7 @@ const nav1Variants = {
 const nav2Variants = {
 	visible: {
 		y: 0,
-		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: .9 }
+		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: .8 }
 	},
 	hidden: {
 		y: -200
@@ -41,7 +40,7 @@ const nav2Variants = {
 const nav3Variants = {
 	visible: {
 		y: 0,
-		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: 1 }
+		transition: { type: "spring", duration: 0.2, stiffness: 80, delay: .9 }
 	},
 	hidden: {
 		y: -200
