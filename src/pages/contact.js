@@ -49,7 +49,7 @@ const Contact = () => {
 
 	const formSubmit = (e) => {
 		e.preventDefault();
-		
+
 		const data = { firstName: name, lastName: lname, email: email, msg: msg };
 		let valid = Validation(data);
 		if (valid === 1) {
@@ -77,20 +77,19 @@ const Contact = () => {
 			axios
 				.post("https://zehrataqvi.herokuapp.com/email", data)
 				.then((res) => {
-					setName("")
-					setLname("")
-					setEmail("")
-					setMsg("")
+					setName("");
+					setLname("");
+					setEmail("");
+					setMsg("");
 					setLoading(false);
 					setLoaded(true);
 					setMsgSent(true);
-
 				})
 				.catch((err) => {
-					setName("")
-					setLname("")
-					setEmail("")
-					setMsg("")
+					setName("");
+					setLname("");
+					setEmail("");
+					setMsg("");
 					setLoading(false);
 					setLoaded(true);
 					setServerError(true);
@@ -145,7 +144,7 @@ const Contact = () => {
 							id="lname"
 							className="input "
 							placeholder="Last name"
-							value= {lname}
+							value={lname}
 							onChange={(e) => {
 								setLname(e.target.value);
 							}}
@@ -204,7 +203,10 @@ const Contact = () => {
 
 					{serverError &&
 					!msgSent && (
-						<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="btn input-b sending serverdown">
+						<motion.div
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							className="btn input-b sending serverdown">
 							{" "}
 							Hmm.. looks like the server is down. Please message me at zehrataqvvi@gmail.com{" "}
 						</motion.div>
@@ -212,13 +214,12 @@ const Contact = () => {
 
 					{!loading &&
 					msgSent && (
-						<motion.input
+						<motion.div
 							initial={{ opacity: 0 }}
 							animate={{ opacity: 1 }}
-							disabled
-							value="Message sent! I will get back to you soon."
-							className="btn input-b "
-						/>
+							className="btn input-b sending serverdown">
+							Message recieved! I will get back to you soon.
+						</motion.div>
 					)}
 				</form>
 			</div>
