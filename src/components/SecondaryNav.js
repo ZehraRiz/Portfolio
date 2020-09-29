@@ -51,7 +51,7 @@ const pageheadVariants = {
 		y: 0,
 		transition: {
 			type: "spring",
-			stiffness: 80,
+			stiffness: 70,
 		}
 	},
 	hidden: { y: "-100vh" }

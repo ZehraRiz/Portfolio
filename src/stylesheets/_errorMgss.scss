@@ -1,23 +1,23 @@
 .error_container {
     position: absolute;
-    background-color: $pink-color;
+    background-color: $light-grey-color;
     height: 4rem;
     width: 70%;
-    background-color: $pink-color;
     right: 0;
     bottom: 0;
-    color: #fff;
+    color: $dark-grey-color;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 1.8rem !important;
+    font-size: 1.2rem !important;
     letter-spacing: .3rem;
+    padding: 0 1rem;
 }
 
 
 
 .error_icon {
-    height: 2.5rem !important;
-    width: 2.5rem !important;
-    margin-right: .25rem;
+    height: 2rem !important;
+    width: 2rem !important;
+    margin-right: 1.5rem;
 }

@@ -49,17 +49,18 @@ const Contact = () => {
 
 	const formSubmit = (e) => {
 		e.preventDefault();
+		
 		const data = { firstName: name, lastName: lname, email: email, msg: msg };
 		let valid = Validation(data);
 		if (valid === 1) {
 			console.log("here");
 			setErrorType(1);
-			setErrorMessage("Please enter your first name");
+			setErrorMessage("Looks like you forgot to add your first name");
 			return;
 		}
 		if (valid === 2) {
 			setErrorType(2);
-			setErrorMessage("Please enter your last name");
+			setErrorMessage("Looks like you forgot to add your last name");
 			return;
 		}
 		if (valid === 3) {
@@ -76,11 +77,20 @@ const Contact = () => {
 			axios
 				.post("https://zehrataqvi.herokuapp.com/email", data)
 				.then((res) => {
+					setName("")
+					setLname("")
+					setEmail("")
+					setMsg("")
 					setLoading(false);
 					setLoaded(true);
 					setMsgSent(true);
+
 				})
 				.catch((err) => {
+					setName("")
+					setLname("")
+					setEmail("")
+					setMsg("")
 					setLoading(false);
 					setLoaded(true);
 					setServerError(true);
@@ -121,6 +131,7 @@ const Contact = () => {
 							id="name"
 							className="input "
 							placeholder="First name"
+							value={name}
 							onChange={(e) => {
 								setName(e.target.value);
 							}}
@@ -134,6 +145,7 @@ const Contact = () => {
 							id="lname"
 							className="input "
 							placeholder="Last name"
+							value= {lname}
 							onChange={(e) => {
 								setLname(e.target.value);
 							}}
@@ -147,6 +159,7 @@ const Contact = () => {
 							id="email"
 							className="input "
 							placeholder="Email"
+							value={email}
 							onChange={(e) => {
 								setEmail(e.target.value);
 							}}
@@ -159,6 +172,7 @@ const Contact = () => {
 							id="message"
 							className="input "
 							placeholder="Message"
+							value={msg}
 							onChange={(e) => {
 								setMsg(e.target.value);
 							}}

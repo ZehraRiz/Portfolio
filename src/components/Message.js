@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExclamation } from "@fortawesome/free-solid-svg-icons";
+import {  faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 export const Message = ({ msg, success }) => {
@@ -21,7 +21,7 @@ export const Message = ({ msg, success }) => {
 						duration: 1,
 						stiffness: 200
 					}}>
-					<FontAwesomeIcon className="error_icon" icon={faExclamation} />
+					<FontAwesomeIcon className="error_icon" icon={faExclamationTriangle} />
 
 					<p className="error_msg" />
 					{msg}
