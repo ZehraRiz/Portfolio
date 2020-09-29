@@ -69,7 +69,9 @@ export const NavBar = () => {
 			/>
 			<div className="nav">
 				<div className="mobile-nav">
-					<motion.div variants={animate? h1variants : empty} initial="hidden" animate="visible">
+					<motion.div
+					// variants={animate ? h1variants : empty} initial="hidden" animate="visible"
+					>
 						<Link to="/">
 							<h1>
 								Z<span className="pink">.</span>
@@ -88,10 +90,11 @@ export const NavBar = () => {
 
 				<ul className="nav-list">
 					<motion.li
-						className="nav-item"
-						variants={animate ? nav1Variants : empty}
-						initial="hidden"
-						animate="visible">
+						// className="nav-item"
+						// variants={animate ? nav1Variants : empty}
+						// initial="hidden"
+						// animate="visible"
+					>
 						<h2>
 							<ProjectsLink to="/" className="nav-link">
 								Projects
@@ -99,10 +102,11 @@ export const NavBar = () => {
 						</h2>
 					</motion.li>
 					<motion.li
-						variants={animate ? nav2Variants : empty}
-						initial="hidden"
-						animate="visible"
-						className="nav-item">
+						// variants={animate ? nav2Variants : empty}
+						// initial="hidden"
+						// animate="visible"
+						// className="nav-item"
+					>
 						<h2>
 							<Link to="/about" className="nav-link" activeClassName="active">
 								About
@@ -117,10 +121,11 @@ export const NavBar = () => {
 						</h2>
 					</li> */}
 					<motion.li
-						variants={animate ? nav3Variants : empty}
-						initial="hidden"
-						animate="visible"
-						className="nav-item">
+						// variants={animate ? nav3Variants : empty}
+						// initial="hidden"
+						// animate="visible"
+						// className="nav-item"
+					>
 						<h2>
 							<Link to="/contact" className="nav-link" activeClassName="active">
 								Contact
