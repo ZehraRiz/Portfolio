@@ -3,7 +3,7 @@
 require("dotenv").config();
 
 module.exports = {
-  plugins: [{
+  plugins: ["gatsby-plugin-react-helmet", {
     resolve: "gatsby-transformer-remark",
     options: {
       // CommonMark mode (default: true)

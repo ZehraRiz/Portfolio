@@ -16,6 +16,9 @@ export const Layout = ({ children, page, isProjectDescription }) => {
 		<Fragment>
 			<Helmet>
 				<link rel="icon" href={favicon} />
+          <meta charSet="utf-8" />
+          <title>Zehra Taqvi</title>
+ 
 			</Helmet>
 			<div className="layout">
 				<NavBar />

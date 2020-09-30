@@ -2,11 +2,12 @@ import React from "react";
 import { Layout, ProjectCard } from "../components";
 import { graphql } from "gatsby";
 
-export default function Home({ data }) {
+export default function Home({ data, location }) {
 	const { allContentfulProjects: { nodes: projects } } = data;
 
 	return (
 		<Layout page="Projects">
+		
 			<div className="container projects-container">
 				{projects.map((project, i) => {
 					const p = {
