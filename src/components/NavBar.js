@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby"; // to query for image data
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import { Link } from "gatsby";

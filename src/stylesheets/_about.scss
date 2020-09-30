@@ -5,9 +5,8 @@
     a {
         line-height: 1.28rem;
     }
-
+    margin: 0 auto;
     bottom: 0;
-    width: 40rem;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
@@ -16,20 +15,21 @@
         "d d";
 
     @include media-md {
-        width: 60rem;
-        margin: 0 auto;
-        grid-gap: 1rem;
+        width: 80%;
     }
 
-     @include media-lg {
-         width: 100rem;
-          grid-template-areas:
-            "i d"
-            "i d";
-     }
-     @include media-xl {
-         width: 120rem;
-     }
+    @include media-lg {
+        width: 100%;
+        grid-gap: 0;
+         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "i d d"
+            "i d d"
+            "i d d";
+    }
+    @include media-xl {
+        width: 120rem;
+    }
 }
 
 .about-image {
@@ -38,10 +38,11 @@
     @include media-md {
         height: 40rem !important;
         overflow: hidden;
-        margin-right: 2rem;
     }
     @include media-lg {
+        margin: 0;
         height: 40rem !important;
+        width: 100%;
         overflow: hidden;
     }
 }
@@ -50,16 +51,17 @@
     grid-area: d;
     padding: 2rem 0rem;
     @include media-md {
-        height: 30rem;
+        height: 500px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-evenly;
     }
     @include media-lg {
-        height: 40rem !important;
-        padding: 4rem 2rem;
-        margin: auto 0;
+        height: auto;
+        width: 100%;
+        padding: 0;
+        padding-left: 6rem ;
+        margin:  0;
     }
 }
-

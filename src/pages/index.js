@@ -1,11 +1,9 @@
 import React from "react";
 import { Layout, ProjectCard } from "../components";
-import { motion } from "framer-motion";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 export default function Home({ data }) {
 	const { allContentfulProjects: { nodes: projects } } = data;
-	
 
 	return (
 		<Layout page="Projects">
@@ -13,7 +11,6 @@ export default function Home({ data }) {
 				{projects.map((project, i) => {
 					const p = {
 						name: project.name,
-						description: project.shortDescription.shortDescription,
 						live: project.liveUrl,
 						code: project.githubUrl,
 						image: project.displayImage.fluid,
@@ -38,9 +35,6 @@ export const query = graphql`
 					fluid {
 						...GatsbyContentfulFluid
 					}
-				}
-				shortDescription {
-					shortDescription
 				}
 				name
 				category

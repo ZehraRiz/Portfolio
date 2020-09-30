@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithubAlt, faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import {  faGithub, faLinkedinIn, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 
@@ -77,15 +77,14 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 						variants={animate ? h2variants : empty}
 						initial="hidden"
 						animate="visible">
-						Hello! I am a passionate full-stack developer, meticulios app tester developer and skilled
-						coder.
+						Hello! I am a passionate web-developer, meticulous app-tester, and a proficient coder.
 					</motion.h2>
 					<motion.p
 						className="secondary_nav-subheading"
 						variants={animate ? subheadvariants : empty}
 						initial="hidden"
 						animate="visible">
-						Freelance programmer based in Riyadh
+						I strive to craft code that is innovative, flexible and scalable. 
 					</motion.p>
 				</div>
 
@@ -94,14 +93,14 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 					initial="hidden"
 					animate="visible"
 					className="secondary_nav-icons">
-					<a href="https://github.com/ZehraRiz" target="_blank">
+					<a href="https://github.com/ZehraRiz" target="_blank" rel="noreferrer">
 						<FontAwesomeIcon icon={faGithub} className="secondary_nav-icon" />
 					</a>
 
-					<a href="https://www.linkedin.com/in/zehrataqi" target="_blank">
+					<a href="https://www.linkedin.com/in/zehrataqi" target="_blank" rel="noreferrer">
 						<FontAwesomeIcon icon={faLinkedinIn} className="secondary_nav-icon" />
 					</a>
-					<a href="https://twitter.com/zehrataqi_" target="_blank">
+					<a href="https://twitter.com/zehrataqi_" target="_blank" rel="noreferrer">
 						<FontAwesomeIcon icon={faTwitter} className="secondary_nav-icon" />
 					</a>
 				</motion.div>

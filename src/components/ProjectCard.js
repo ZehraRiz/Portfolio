@@ -1,10 +1,9 @@
-import React, { useEffect } from "react";
-import Image from "gatsby-image";
+import React from "react";
 import { Link } from "gatsby";
 import Img from "gatsby-image";
 
 export const ProjectCard = ({ project, i }) => {
-	const { name, description, live, code, image, slug, category } = project;
+	const { name,  live, code, image, slug, category } = project;
 		let animate = true
 	if (typeof window !== 'undefined') {
 			animate = !window.sessionStorage.getItem("firstLoadDone");
@@ -39,10 +38,10 @@ export const ProjectCard = ({ project, i }) => {
 					</p>
 				</div>
 				<div className="links">
-					<a className="link-btn " href={live} target="_blank">
+					<a className="link-btn " href={live} target="_blank" rel="noreferrer">
 						Live preview
 					</a>
-					<a className="link-btn " href={code} target="_blank">
+					<a className="link-btn " href={code} target="_blank" rel="noreferrer">
 						View Code
 					</a>
 				</div>
