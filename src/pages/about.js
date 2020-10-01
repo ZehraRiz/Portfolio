@@ -44,34 +44,29 @@ const about = ({ data }) => {
 					data-sal-delay={animate ? "1000" : "200"}
 					data-sal-easing="ease-out">
 					<p className="home_para">
-						My name is Zehra Taqvi and I am a Software Developer. I have majorly been working with
-						JavaScript and HTML/CSS/SASS over the past years.
+						My name is Zehra Taqvi and I am a Software Developer. I have majorly been working with JavaScript and HTML/CSS/SASS over the past years.
 					</p>
 					<br />
 					<br />
 					<p className="home_para">
-						I worked as a full-stack developer with small teams of developers to build some complex web
-						applications using ReactJS, Node, Socket.IO and MongoDB. During this time I experimented with
-						various third-party libraries and packages for animations, UI and utilities.
-					</p>
-					<br />
-					<br />
-					<p className="home_para">
-						{" "}
-						Recently, I started using GatsbyJS and built this site (zehra-taqvi.com) upon it. It is also
-						integrated with a headless CMS (Contentful) to pull in data dynamically. This website also uses
-						some animation libraries such as Framer Motion and Sal.js.
+						I worked as a full-stack engineer with small teams of developers to build some complex web applications using ReactJS, Node, Socket.IO and MongoDB. During this time I experimented with various third-party libraries and packages for animations, UI and utilities.
 					</p>
 					<br />
 					<br />
 					<p className="home_para">
 						{" "}
-						In the past I have learnt different frameworks and programming languages like Java, React Native
-						and Android development but front-end web development was the one that struck me the most.
+						Recently, I started using GatsbyJS and built this site (zehra-taqvi.com) upon it. It is integrated with a headless CMS which pulls in data dynamically from Contnenful. This website also uses some animation libraries such as Framer Motion and Sal.js.
+
+					</p>
+					<br />
+					<br />
+					<p className="home_para">
+						{" "}
+						In the past, I learnt different frameworks and programming languages like Java, React Native and Android development but Front-end web development was the one that struck me the most.
 					</p>
 						<br />
 					<br />
-					<p className="home_para"> I am currently looking for opportunites as a front-end developer.</p>
+					<p className="home_para"> I am currently looking for opportunities as a Front-end developer..</p>
 				</div>
 			</div>
 		</Layout>
