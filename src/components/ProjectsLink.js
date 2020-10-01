@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const invalidPaths = [ "/about", "/blog", "/contact" ];
+const invalidPaths = [ "/about/", "/blog", "/contact/" ];
 
 const isActive = ({ location }) => {
 	if (!invalidPaths.includes(location.pathname)) {

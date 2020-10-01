@@ -71,7 +71,7 @@ export const NavBar = () => {
 					<motion.div
 					// variants={animate ? h1variants : empty} initial="hidden" animate="visible"
 					>
-						<Link to="/">
+						<Link  to="/">
 							<h1>
 								Z<span className="pink">.</span>
 							</h1>
@@ -107,7 +107,7 @@ export const NavBar = () => {
 						// className="nav-item"
 					>
 						<h2>
-							<Link to="/about" className="nav-link" activeClassName="active">
+							<Link to="/about/" className="nav-link" activeClassName="active">
 								About
 							</Link>
 						</h2>
@@ -126,7 +126,7 @@ export const NavBar = () => {
 						// className="nav-item"
 					>
 						<h2>
-							<Link to="/contact" className="nav-link" activeClassName="active">
+							<Link to="/contact/" className="nav-link" activeClassName="active">
 								Contact
 							</Link>
 						</h2>
