@@ -11,6 +11,7 @@
     @include media-lg {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: (38rem auto);
+        
     }
 }
 
@@ -36,7 +37,7 @@
 
 .project-card:nth-child(2),
 .project-card:nth-child(4),
-.project-card:nth-child(6),
+.project-card:nth-child(5),
 .project-card:nth-child(10),
 .project-card:nth-child(14)
 {
@@ -54,7 +55,7 @@
         }
     }
     @include media-lg {
-        height: 60rem;
+        height: 60rem !important;
         grid-row: span 2;
     }
 }
@@ -69,7 +70,7 @@
 }
 
 .project-card-description {
-    min-height: 40%;
+    min-height: 40% !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

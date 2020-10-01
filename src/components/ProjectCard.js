@@ -21,8 +21,10 @@ export const ProjectCard = ({ project, i }) => {
 					<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />
 				</Link>
 			) : (
-				<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />
-			)}
+					<div className="project-image">	<Img fluid={image} style={{ height: "calc(100%)" }} imgStyle={{ objectFit: "cover" }} />
+		 </div>
+
+				)}
 
 			<div className="project-card-description">
 				<div>
