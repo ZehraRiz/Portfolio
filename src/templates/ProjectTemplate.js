@@ -37,6 +37,10 @@ const ProjectTemplate = ({ data }) => {
 					</div>
 					{documentToReactComponents(article, options)}</div>
 				<div className="project-details"
+					data-sal="slide-right"
+					data-sal-duration="500"
+					data-sal-delay={animate ? "1000" : "200"}
+					data-sal-easing="ease-out"
 				>
 					<div className="project-details-child">
 						<h5>Project Category</h5>

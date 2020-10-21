@@ -106,7 +106,7 @@ const Contact = () => {
 					data-sal-delay={animate ? "1000" : "200"}
 					data-sal-easing="ease-out">
 					{" "}
-					Need help? Contact me on <span className="pink">zehrataqi@gmail.com</span>
+					Need help? Contact me on <span className="pink">zehrataqvvi@gmail.com</span>
 				</p>
 				<br />
 				<p

@@ -127,17 +127,17 @@ h5 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   letter-spacing: 0.1rem;
   margin-right: -0.1rem;
   font-family: "Lora", sans-serif;
   font-weight: 200;
-  color: #898889;
+  color: #6D6C6D;
 }
 @media screen and (min-width: 750px) {
   p {
-    font-size: 1.4rem;
-    letter-spacing: 0, 15rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
     margin-right: -0.15rem;
   }
 }

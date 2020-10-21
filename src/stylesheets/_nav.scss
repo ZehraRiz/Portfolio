@@ -153,11 +153,11 @@ nav {
     color: $pink-color;
     text-decoration: underline;
     font-family: $secondary-font;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-right: -0.25rem;
     letter-spacing: 0.25rem;
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 600;
     transition: all .6s ease;
     @include media-md {
         font-size: 1.4rem;

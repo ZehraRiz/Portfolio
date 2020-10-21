@@ -77,7 +77,7 @@ export const SecondaryNav = ({ page, isProjectDescription }) => {
 						variants={animate ? h2variants : empty}
 						initial="hidden"
 						animate="visible">
-						Hello! I am a passionate web-developer, meticulous app-tester, and a proficient coder.
+						Hello! I am Zehra, a passionate web-developer, meticulous app-tester, and proficient coder.
 					</motion.h2>
 					<motion.p
 						className="secondary_nav-subheading"

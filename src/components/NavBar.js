@@ -5,16 +5,6 @@ import { Link } from "gatsby";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { ProjectsLink } from "../components";
 
-const h1variants = {
-	visible: {
-		y: 0,
-		transition: {
-			type: "spring",
-			stiffness: 80,
-		}
-	},
-	hidden: { y: "-100vh" }
-};
 
 const nav1Variants = {
 	visible: {

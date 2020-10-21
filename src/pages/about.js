@@ -44,29 +44,30 @@ const about = ({ data }) => {
 					data-sal-delay={animate ? "1000" : "200"}
 					data-sal-easing="ease-out">
 					<p className="home_para">
-						My name is Zehra Taqvi and I am a Software Developer. I have majorly been working with JavaScript and HTML/CSS/SASS over the past years.
+						My name is Zehra Taqvi and I am a Software Developer. I have majorly been working with
+						JavaScript and HTML/CSS/SASS over the past years.
 					</p>
-					<br />
-					<br />
+					
+				
 					<p className="home_para">
-						I worked as a full-stack engineer with small teams of developers to build some complex web applications using ReactJS, Node, Socket.IO and MongoDB. During this time I experimented with various third-party libraries and packages for animations, UI and utilities.
+						As a front-end engineer, I build web application interfaces, logic, interactions and user
+						experience. I also write unit and integration tests for applications.
 					</p>
-					<br />
-					<br />
+				
+				
+						<p className="home_para">
+						 My primary skill set consists of are React, Redux, Gatsby, Jest and React-testing-library. 
+					</p>
+				
+					
 					<p className="home_para">
 						{" "}
-						Recently, I started using GatsbyJS and built this site (zehra-taqvi.com) upon it. It is integrated with a headless CMS which pulls in data dynamically from Contnenful. This website also uses some animation libraries such as Framer Motion and Sal.js.
-
+						In the past, I learnt different frameworks and programming languages like Java, React Native and
+						Android development.
 					</p>
-					<br />
-					<br />
-					<p className="home_para">
-						{" "}
-						In the past, I learnt different frameworks and programming languages like Java, React Native and Android development but Front-end web development was the one that struck me the most.
-					</p>
-						<br />
-					<br />
-					<p className="home_para"> I am currently looking for opportunities as a Front-end developer..</p>
+			
+				
+					<p className="home_para"> I am currently looking for opportunities as a Front-end developer.</p>
 				</div>
 			</div>
 		</Layout>
